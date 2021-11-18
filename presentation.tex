@@ -18,91 +18,48 @@
 \documentclass{beamer}
 
 \mode<presentation> {
+	\usetheme{Madrid}
 
-% The Beamer class comes with a number of default slide themes
-% which change the colors and layouts of slides. Below this is a list
-% of all the themes, uncomment each in turn to see what they look like.
-
-%\usetheme{default}
-%\usetheme{AnnArbor}
-%\usetheme{Antibes}
-%\usetheme{Bergen}
-%\usetheme{Berkeley}
-%\usetheme{Berlin}
-%\usetheme{Boadilla}
-%\usetheme{CambridgeUS}
-%\usetheme{Copenhagen}
-%\usetheme{Darmstadt}
-%\usetheme{Dresden}
-%\usetheme{Frankfurt}
-%\usetheme{Goettingen}
-%\usetheme{Hannover}
-%\usetheme{Ilmenau}
-%\usetheme{JuanLesPins}
-%\usetheme{Luebeck}
-\usetheme{Madrid}
-%\usetheme{Malmoe}
-%\usetheme{Marburg}
-%\usetheme{Montpellier}
-%\usetheme{PaloAlto}
-%\usetheme{Pittsburgh}
-%\usetheme{Rochester}
-%\usetheme{Singapore}
-%\usetheme{Szeged}
-%\usetheme{Warsaw}
-
-% As well as themes, the Beamer class has a number of color themes
-% for any slide theme. Uncomment each of these in turn to see how it
-% changes the colors of your current slide theme.
-
-%\usecolortheme{albatross}
-%\usecolortheme{beaver}
-%\usecolortheme{beetle}
-%\usecolortheme{crane}
-%\usecolortheme{dolphin}
-%\usecolortheme{dove}
-%\usecolortheme{fly}
-%\usecolortheme{lily}
-%\usecolortheme{orchid}
-%\usecolortheme{rose}
-%\usecolortheme{seagull}
-%\usecolortheme{seahorse}
-%\usecolortheme{whale}
-%\usecolortheme{wolverine}
-
-%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
-%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
-
-%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+	%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+	
+	%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+	
+	%\addtobeamertemplate{frametitle}{}{\section{\insertframetitle}} % To add all frame title into table of contents automacitally
+	
+	%\setbeamertemplate{items}[square]
 }
 
-\usepackage{graphicx} % Allows including images
+\usepackage{graphicx}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Short title]{Full Title of the Talk} % The short title appears at the bottom of every slide, the full title is only on the title page
-
-\author{John Smith} % Your name
-\institute[UCLA] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
-{
-University of California \\ % Your institution for the title page
-\medskip
-\textit{john@smith.com} % Your email address
+\title[DragonFly]{DragonFly - Surveil Transport sector into Smart City}
+%\title[Traffic Policing]{ Intelligent Policing of Traffic}
+\author[Group1]{
+	{\small \textit{Guided by:}} Dr. Rafeeque P.C \\
+	\medskip
+	{\small \textbf{\textit{Group 1}}} \\
+	Abhinand C \\
+	Edwin Jose George \\
+	Lavanya E.V \\
+	Shilpa Suresh
 }
-\date{\today} % Date, can be changed to a custom date
+\institute[GCEK]{Government College of Engineering Kannur}
+\date{\today}
 
 \begin{document}
 
 \begin{frame}
-\titlepage % Print the title page as the first slide
+\titlepage
 \end{frame}
 
 \begin{frame}
-\frametitle{Overview} % Table of contents slide, comment this block out to remove it
-\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\frametitle{Contents}
+\tableofcontents
 \end{frame}
 
 %----------------------------------------------------------------------------------------
@@ -110,150 +67,117 @@ University of California \\ % Your institution for the title page
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
-%------------------------------------------------
+\section{Problem Statement}
+\begin{frame}
+	\frametitle{Problem Statement}
+	To provide a facility to track public vehicles, see their trip status and monitor their path. Also provide facility to track vehicles, detect accidents using image processing to provide safe public transport system. 
+\end{frame}
 
-\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+%------------------------------------------------
+\section{Motivation and Relevance}
+\begin{frame}
+	\frametitle{Motivation and Relevance}
+	\begin{enumerate}
+		\item Enable tracking of vehicles, ie, retrieving route history by typing in the description
+		\item Alert Control Room, \& emergency services in case of accident
+		\item Public APIs for location of public transport, and tracking system like Indian Railway NTES system
+	\end{enumerate}
+	
+\end{frame}
+
+
+%------------------------------------------------
+\section{Proposed Framework}
+\begin{frame}
+	\frametitle{Proposed Framework}
+	content goes here...
+\end{frame}
+
+%------------------------------------------------
+\section{Requirements}
+\begin{frame}
+	\frametitle{Requirements}
+	content goes here...
+\end{frame}
+
+
+%------------------------------------------------
+\section{Challenges and issues}
+\begin{frame}
+	\frametitle{Challenges and issues}
+	content goes here...
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
+	\Huge{\centerline{The End}}
+\end{frame}
+
+%-------------------------incomplete infos-----------------------------
+\section{Temporary info}
+\begin{frame}
+	The below slides are not to be included during presentation! 
+\end{frame}
+
+\subsection{Ponder points}
+\begin{frame}
+	\Huge{\centerline{Ponder points}}
+\end{frame}
 
 \begin{frame}
-\frametitle{Paragraphs of Text}
-Sed iaculis dapibus gravida. Morbi sed tortor erat, nec interdum arcu. Sed id lorem lectus. Quisque viverra augue id sem ornare non aliquam nibh tristique. Aenean in ligula nisl. Nulla sed tellus ipsum. Donec vestibulum ligula non lorem vulputate fermentum accumsan neque mollis.\\~\\
-
-Sed diam enim, sagittis nec condimentum sit amet, ullamcorper sit amet libero. Aliquam vel dui orci, a porta odio. Nullam id suscipit ipsum. Aenean lobortis commodo sem, ut commodo leo gravida vitae. Pellentesque vehicula ante iaculis arcu pretium rutrum eget sit amet purus. Integer ornare nulla quis neque ultrices lobortis. Vestibulum ultrices tincidunt libero, quis commodo erat ullamcorper id.
+	\frametitle{What does this project do?}
+	\begin{enumerate}
+		\item GPS tracking vehicles (Transport Bus, School Bus, Cargo trucks, Taxi etc) to determine its location
+		\item Predict the route and estimated time of arrival. Also get a glimpes of other avalaible modes of transport from a particular point
+		\item Making use of traffic cameras to identify vehicles and track their route, helping authorities to trackdown a specific vehicle.
+		\item Analysis on data to determine traffic flow to measure aspects such as speed, registration of vehicles etc to ensure regulation of traffic rules
+	\end{enumerate}
 \end{frame}
-
-%------------------------------------------------
 
 \begin{frame}
-\frametitle{Bullet Points}
-\begin{itemize}
-\item Lorem ipsum dolor sit amet, consectetur adipiscing elit
-\item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
-\item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
-\item Nam cursus est eget velit posuere pellentesque
-\item Vestibulum faucibus velit a augue condimentum quis convallis nulla gravida
-\end{itemize}
+	\frametitle{Application Domain}
+	\begin{enumerate}
+		\item Locating public transport buses, their schedule and route planings
+		\item Educational and other firms to track and monitor their transport system.
+		\item Tracking down corrupt drivers/vehicles \\(check on polution/insurance/registration-permits, tagging specifing vehicle etc)
+		\item Enforcment of traffic rules. (Speed limits, helmets for 2 wheelers etc)
+		\item Alerting the suggesting routes for emergency servies like ambulance, fire-force etc.
+		\item Accident detection
+	\end{enumerate}
 \end{frame}
-
-%------------------------------------------------
 
 \begin{frame}
-\frametitle{Blocks of Highlighted Text}
-\begin{block}{Block 1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-\end{block}
-
-\begin{block}{Block 2}
-Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis magna at risus dictum tempor eu vitae velit.
-\end{block}
-
-\begin{block}{Block 3}
-Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci, sed blandit justo nisi ac lacus.
-\end{block}
+	\frametitle{Features}
+	\begin{enumerate}
+		\item Route tracking and planning
+		\item Monitoring traffic rules using image processing
+		\item Public APIs for locating units (Indian Railways)
+		\item Identifying accidents and trigging associated events.
+	\end{enumerate}
 \end{frame}
 
-%------------------------------------------------
 
 \begin{frame}
-\frametitle{Multiple Columns}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
-\end{columns}
+	\frametitle{Limitation at sight?}
+	\begin{enumerate}
+		\item Real time image processing needs better hardware support.	
+		\item How to detect accidents, where to deploy hardware units?
+		\item Traffic cameras can effected from blind spots.
+		\item Video capture difficulty
+		\begin{itemize}
+			\item Moving vehicles might give blurry image
+			\item Envrionmental factors (rain, fog)
+			\item Light beams of vehicles in night light can blind the camera
+		\end{itemize}
+		\item Scale up issues
+		\begin{itemize}
+			\item hardware processing limitation
+			\item Addressing vast varity of vehicles (issue of smart cities)	
+		\end{itemize}
+		\item Legal considerations
+	\end{enumerate}
 \end{frame}
-
-%------------------------------------------------
-\section{Second Section}
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Table}
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Verbatim}
-\begin{example}[Theorem Slide Code]
-\begin{verbatim}
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
-\end{example}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
-
-This statement requires citation \cite{p1}.
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
-\end{thebibliography}
-}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\Huge{\centerline{The End}}
-\end{frame}
-
 %----------------------------------------------------------------------------------------
 
 \end{document} 
