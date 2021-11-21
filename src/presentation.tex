@@ -19,7 +19,7 @@
 
 \mode<presentation> {
 	\usetheme{Madrid}
-
+	
 	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
 	%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
 	
@@ -52,144 +52,134 @@
 \date{\today}
 
 \begin{document}
-
-\begin{frame}
-\titlepage
-\end{frame}
-
-\begin{frame}
-\frametitle{Contents}
-\tableofcontents
-\end{frame}
-
-%----------------------------------------------------------------------------------------
-%	PRESENTATION SLIDES
-%----------------------------------------------------------------------------------------
-
-%------------------------------------------------
-\section{Problem Statement}
-\begin{frame}
-	\frametitle{Problem Statement}
-	%To provide a facility to track public vehicles, see their trip status and monitor their path. Also provide facility to track vehicles, detect accidents using image processing to provide safe public transport system. 
-	To provide a highly integrated platform 
-\end{frame}
-
-%------------------------------------------------
-\section{Motivation and Relevance}
-\begin{frame}
-	\frametitle{Motivation and Relevance}
-	\begin{enumerate}
-		\item Enable tracking of vehicles, ie, retrieving route history by typing in the description
-		\item Alert Control Room, \& emergency services in case of accident
-		\item Public APIs for location of public transport, and tracking system like Indian Railway NTES system
-	\end{enumerate}
-\end{frame}
-
-
-%------------------------------------------------
-\section{Proposed Framework}
-\begin{frame}
-	\frametitle{Proposed Framework}
-	\begin{figure}
-        \includegraphics[width=0.8\linewidth]{res/architecture.png}
-        \caption{High-level platform agnostic architecture}
-    \end{figure}
-\end{frame}
-
-%------------------------------------------------
-\section{Requirements}
-\begin{frame}
-	\frametitle{Requirements}
-	content goes here...
-\end{frame}
-
-
-%------------------------------------------------
-\section{Challenges and issues}
-\begin{frame}
-	\frametitle{Challenges and issues}
-	content goes here...
-\end{frame}
-
-
-%------------------------------------------------
-\begin{frame}
-	\Huge{\centerline{The End}}
-\end{frame}
-
-%-------------------------incomplete infos-----------------------------
-\section{Temporary info}
-\begin{frame}
-	The below slides are not to be included during presentation! 
-\end{frame}
-
-\subsection{Ponder points}
-\begin{frame}
-	\Huge{\centerline{Ponder points}}
-\end{frame}
-
-\begin{frame}
-	\frametitle{What does this project do?}
-	\begin{enumerate}
-		\item GPS tracking of public vehicles 
-		\item Predict the route and estimated time of arrival.
-		\item Making use of traffic cameras to identify vehicles, track their route, helping authorities to track down a specific vehicle etc.
-		\item Analysis on data to determine traffic flow to measure aspects such as speed, registration of vehicles etc to ensure regulation of traffic rules
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Application Domain}
-	\begin{enumerate}
-		\item GPS Locating public transport buses, their schedule and route plannings
-		\item Educational and other firms to track and monitor their transport system. (Q: What about GPS, it's being made mandatory)
-		\item Tracking down corrupt drivers/vehicles \\(check on pollution/insurance/registration-permits, tagging specifying vehicle etc)
-		\item Enforcement of traffic rules. (Speed limits, helmets for 2 wheels etc)
-		\item Alerting the suggesting routes for emergency services like ambulance, fire-force etc.
-		\item Accident detection
-		\item Automating Surveillance footage monitoring
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Features}
-	\begin{enumerate}
-		\item Route tracking and planning
-		\item Analysing traffic using deep learning
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Contents}
+		\tableofcontents
+	\end{frame}
+	
+	%----------------------------------------------------------------------------------------
+	%	PRESENTATION SLIDES
+	%----------------------------------------------------------------------------------------
+	
+	%------------------------------------------------
+	\section{Problem Statement}
+	\begin{frame}{Problem Statement}
+		%To provide a facility to track public vehicles, see their trip status and monitor their path. Also provide facility to track vehicles, detect accidents using image processing to provide safe public transport system. 
+		To provide a highly integrated platform that monitors public transport system, providing safe and easy transport facility.
+	\end{frame}
+	
+	%------------------------------------------------
+	\section{Motivation and Relevance}
+	\begin{frame}{Motivation and Relevance}
+		\begin{enumerate}
+			\item Public APIs for location of public transport, and tracking system (like Indian Railway NTES system) enlighten public with current traffic and its trends.
+			\item Provides facility to decide when, where, and which transport modes are available.
+			\item Enable tracking of vehicles, ie, retrieving route history and related info by typing in the description helps authority in promoting quality flow of traffic.
+			\item Aids in better Alert Control System, \& emergency services in case of accidents and/or other events.
+			
+		\end{enumerate}
+	\end{frame}
+	
+	
+	%------------------------------------------------
+	\section{Proposed Framework}
+	\begin{frame}{Proposed Framework}
+		\begin{figure}
+			\includegraphics[width=0.8\linewidth]{res/architecture.png}
+			\caption{High-level platform agnostic architecture}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
 		\begin{itemize}
-		    \item Accident Alert system
-		    \item Traffic rules and looking up insurance, pollution, permits etc of vehicles
-		    \item Ambulance and police,.. .safety
-		    \item Google like intuitive search engine for tracking specific vehicles
+			\item Public transport vehicle emits GPS info.
+			\item Traffic cameras are utilized to identify and tag vehicles.
+			\item API facilitate secure system interaction.
+			\item Distributed databases and other services for increased reliability
+			\item Alerting notification for emergency services like ambulance, fire-force, accident response team etc.
 		\end{itemize}
-		\item Public APIs for locating units. (Indian Railways)
-	\end{enumerate}
-\end{frame}
-
-1. Location based AR/MR for intuitive navigation experience  
-2. Natural Language based querying
-
-\begin{frame}
-	\frametitle{Limitation at sight?}
-	\begin{enumerate}
-		\item Real time image processing needs significant hardware support.	
-		\item How to detect accidents, where to deploy hardware units?
-		\item Traffic cameras can effected be from blind spots.
-		\item Video capture difficulty
+	\end{frame}
+	
+	%------------------------------------------------
+	\section{Requirements}
+	%https://www.javatpoint.com/functional-vs-non-functional-requirements
+	%https://www.guru99.com/functional-vs-non-functional-requirements.html#3
+	\begin{frame}{Non-functional Requirements}
 		\begin{itemize}
-			\item Moving vehicles might give blurry image
-			\item Environmental factors (rain, fog)
-			\item Light beams of vehicles in night light can blind the camera
+			\item To be used by non technical public - appealing and simple interface
+			\item Provide reliable and consistent information and service
+			\item Higher concerns on security of personal and public data.
+			\item Must account for mobility and agility.
 		\end{itemize}
-		\item Scale up issues
-		\begin{itemize}
-			\item hardware processing limitation
-			\item Addressing vast variety of vehicles (issue of smart cities)	
-		\end{itemize}
-		\item Legal considerations
-		\item Privacy Policy
-	\end{enumerate}
-\end{frame}
-%----------------------------------------------------------------------------------------
-
+		
+		\begin{block}{Execution qualities}
+			Good interpretation of data which results reasonable processing of information, considering security of processed data.
+		\end{block}
+		
+		\begin{block}{Evolution qualities}
+			Large volume of data needs to be interpreted and processed as clusters. Needs to account for scalability of resources and services, along with extension of new services.
+		\end{block}
+	\end{frame}
+	
+	%------------------------------------------------
+	\begin{frame}{Features}
+		\begin{enumerate}
+			\item Locating public transport, their schedule and route plannings
+			\item Analysing traffic using deep learning
+			\begin{itemize}
+				\item Accident Alert system
+				\item Enforce Traffic rules by looking up insurance, pollution, permits etc
+				\item Help emergency services like Ambulance, fire force and police.
+				\item Google like intuitive search engine for tracking specific vehicles
+			\end{itemize}
+			\item Public APIs that integrate into other services
+		\end{enumerate}
+	\end{frame}
+	%------------------------------------------------
+	
+	\section{Challenges and issues}
+	\begin{frame}{Challenges and issues}
+		\begin{enumerate}
+			\item GPS connectivity limited at remote areas - environmental factors
+			\item Require good accident detection and image processing models.
+			\item Issues of real time image processing
+			\begin{itemize}
+				\item Requires significant hardware support.	
+				\item Effect of light beams and presence of blind spots.
+				\item Moving vehicles might give blurry image
+				\item Effect of environmental factors (rain, fog)
+			\end{itemize}
+			\item Scale up issues
+			\begin{itemize}
+				\item Storage and processing of vast data.
+				\item Addressing vast variety of units (issue of smart cities)	
+			\end{itemize}
+			\item Highly agile system.
+			\item Privacy Policy and Legal considerations.
+		\end{enumerate}
+	\end{frame}
+	
+	% \section{References}
+	% \begin{frame}{References}
+	% \end{frame}
+	
+	%-------------------------Additional point-----------------------------
+	% \section{Ponder points}
+	% \begin{frame}
+	% 	\Huge{\centerline{Ponder points}}
+	% \end{frame}
+	
+	% \begin{frame}{Additional points}
+	%     \begin{enumerate}
+	%         \item Location based AR/MR for intuitive navigation experience
+	%         \item Natural Language based querying
+	%     \end{enumerate}
+	% \end{frame}
+	%----------------------------------------------------------------------------------------
+	
 \end{document} 

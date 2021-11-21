@@ -7,5 +7,6 @@
 *.toc
 *.vrb
 *.flz
+*.fls
 *.fdb_latexmk
 presentation.pdf
