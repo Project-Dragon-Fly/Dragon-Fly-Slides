@@ -70,7 +70,8 @@
 \section{Problem Statement}
 \begin{frame}
 	\frametitle{Problem Statement}
-	To provide a facility to track public vehicles, see their trip status and monitor their path. Also provide facility to track vehicles, detect accidents using image processing to provide safe public transport system. 
+	%To provide a facility to track public vehicles, see their trip status and monitor their path. Also provide facility to track vehicles, detect accidents using image processing to provide safe public transport system. 
+	To provide a highly integrated platform 
 \end{frame}
 
 %------------------------------------------------
@@ -82,7 +83,6 @@
 		\item Alert Control Room, \& emergency services in case of accident
 		\item Public APIs for location of public transport, and tracking system like Indian Railway NTES system
 	\end{enumerate}
-	
 \end{frame}
 
 
@@ -90,7 +90,10 @@
 \section{Proposed Framework}
 \begin{frame}
 	\frametitle{Proposed Framework}
-	content goes here...
+	\begin{figure}
+        \includegraphics[width=0.8\linewidth]{res/architecture.png}
+        \caption{High-level platform agnostic architecture}
+    \end{figure}
 \end{frame}
 
 %------------------------------------------------
@@ -128,9 +131,9 @@
 \begin{frame}
 	\frametitle{What does this project do?}
 	\begin{enumerate}
-		\item GPS tracking vehicles (Transport Bus, School Bus, Cargo trucks, Taxi etc) to determine its location
-		\item Predict the route and estimated time of arrival. Also get a glimpes of other avalaible modes of transport from a particular point
-		\item Making use of traffic cameras to identify vehicles and track their route, helping authorities to trackdown a specific vehicle.
+		\item GPS tracking of public vehicles 
+		\item Predict the route and estimated time of arrival.
+		\item Making use of traffic cameras to identify vehicles, track their route, helping authorities to track down a specific vehicle etc.
 		\item Analysis on data to determine traffic flow to measure aspects such as speed, registration of vehicles etc to ensure regulation of traffic rules
 	\end{enumerate}
 \end{frame}
@@ -138,12 +141,13 @@
 \begin{frame}
 	\frametitle{Application Domain}
 	\begin{enumerate}
-		\item Locating public transport buses, their schedule and route planings
-		\item Educational and other firms to track and monitor their transport system.
-		\item Tracking down corrupt drivers/vehicles \\(check on polution/insurance/registration-permits, tagging specifing vehicle etc)
-		\item Enforcment of traffic rules. (Speed limits, helmets for 2 wheelers etc)
-		\item Alerting the suggesting routes for emergency servies like ambulance, fire-force etc.
+		\item GPS Locating public transport buses, their schedule and route plannings
+		\item Educational and other firms to track and monitor their transport system. (Q: What about GPS, it's being made mandatory)
+		\item Tracking down corrupt drivers/vehicles \\(check on pollution/insurance/registration-permits, tagging specifying vehicle etc)
+		\item Enforcement of traffic rules. (Speed limits, helmets for 2 wheels etc)
+		\item Alerting the suggesting routes for emergency services like ambulance, fire-force etc.
 		\item Accident detection
+		\item Automating Surveillance footage monitoring
 	\end{enumerate}
 \end{frame}
 
@@ -151,31 +155,39 @@
 	\frametitle{Features}
 	\begin{enumerate}
 		\item Route tracking and planning
-		\item Monitoring traffic rules using image processing
-		\item Public APIs for locating units (Indian Railways)
-		\item Identifying accidents and trigging associated events.
+		\item Analysing traffic using deep learning
+		\begin{itemize}
+		    \item Accident Alert system
+		    \item Traffic rules and looking up insurance, pollution, permits etc of vehicles
+		    \item Ambulance and police,.. .safety
+		    \item Google like intuitive search engine for tracking specific vehicles
+		\end{itemize}
+		\item Public APIs for locating units. (Indian Railways)
 	\end{enumerate}
 \end{frame}
 
+1. Location based AR/MR for intuitive navigation experience  
+2. Natural Language based querying
 
 \begin{frame}
 	\frametitle{Limitation at sight?}
 	\begin{enumerate}
-		\item Real time image processing needs better hardware support.	
+		\item Real time image processing needs significant hardware support.	
 		\item How to detect accidents, where to deploy hardware units?
-		\item Traffic cameras can effected from blind spots.
+		\item Traffic cameras can effected be from blind spots.
 		\item Video capture difficulty
 		\begin{itemize}
 			\item Moving vehicles might give blurry image
-			\item Envrionmental factors (rain, fog)
+			\item Environmental factors (rain, fog)
 			\item Light beams of vehicles in night light can blind the camera
 		\end{itemize}
 		\item Scale up issues
 		\begin{itemize}
 			\item hardware processing limitation
-			\item Addressing vast varity of vehicles (issue of smart cities)	
+			\item Addressing vast variety of vehicles (issue of smart cities)	
 		\end{itemize}
 		\item Legal considerations
+		\item Privacy Policy
 	\end{enumerate}
 \end{frame}
 %----------------------------------------------------------------------------------------
