@@ -9,4 +9,11 @@
 *.flz
 *.fls
 *.fdb_latexmk
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.bib
 presentation.pdf
+
+!src/reference.bib
