@@ -13,7 +13,5 @@
 *.bcf
 *.blg
 *.run.xml
-*.bib
 presentation.pdf
 
-!src/reference.bib
