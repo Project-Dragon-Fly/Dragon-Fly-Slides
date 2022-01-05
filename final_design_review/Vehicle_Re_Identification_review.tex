@@ -1,1 +1,92 @@
-Trends in Vehicle Re-Identification Past, present and future \cite{deng2021trends}
+\textbf{Trends in Vehicle Re-Identification Past, present and future \cite{deng2021trends}}
+
+Vehicle Re-identification (re-id) over surveillance camera network with non-overlappingfield of view is an exciting and challenging task in intelligent transportation systems (ITS). 
+
+it becomesmore difficult due to inter-class similarity, intra-class variability, viewpoint changes, and spatio-temporal uncertainty.
+
+Vision-based vehiclere-id approaches, including vehicle appearance, license plate, and spatio-temporal characteristics. 
+
+
+re-identify the specificvehicle that appeared in different cameras over the surveillance network. The vehicle re-idmodule should recognize same vehicle that appears in surveillance cameras installedin different geographical locations. Vehicle re-id can be treated as a fine-grainedrecognition problem that identifies the subordinate type of input class.
+
+Vehicle re-id can be of six categories
+\begin{enumerate}
+	\item Vision based Re-Id
+	\item Magnetic Sensor Based Re-Id
+	\item Inductance Based Re-Id
+	\item GPS Based Re-Id
+	\item Contextual Cues Based Re-Id
+	\item Hybrid Methods Based Re-Id
+\end{enumerate}
+
+
+In computer vision, the aim of vehicle re-id is to identify specific vehicle that appearedover in multiple cameras network. 
+Five Basic steps
+\begin{enumerate}
+\item Data Collection
+\item Bounding Box Generation obtained by vehicle detection technique.
+\item Training Data Annotation
+\item Model Training:  Learning discriminativefeatures and good values for all the weights and the bias from previous annotated vehicle videos or images of the dataset.
+\item Vehicle Retrieval
+\end{enumerate}
+
+Eight different techniques have been employed in this researcharea: 
+(A) Feature representation for vehicle re-id, 
+
+	Classified into two parts: hand-crafted and deep learning features representations. Handcrafted feature representation utilized in person
+	re-id and then applied directly on vehicle re-id task. Deep learning based feature representations such as GoogLeNet [38], VGGNet [39], AlexNet [40], and,ResNet [41] are used for vehicle re-id.
+	
+	Deep Joint Discriminative Learning (DJDL) [45] approach uses identification, and verification and triplet loss functions improved triplet convolutional neural network [46] uses classification and-oriented and triplet loss function to extract discriminative feature representation.
+	
+	
+(B) Similarity metric for vehicle re-id,
+	Distance metric learning approaches [56]are thoroughly studied in image retrieval and recognition tasks, in which metric space is
+	defined in such a way that features that belong to same class are kept closer and different are at distant
+	
+	As in various face recognition algorithms [57,58] uses Euclidean and
+	Cosine distance metric to measure the similarity between the pair of vehicle for re-id.
+	
+	Furthermore,deep relative distance learning (DRDL) [44] studied a two-branch convolutional neuralnetwork to covert the raw vehicle images into a Euclidean space, so that distance can beused directly to measure the similarity of two individual vehicles.
+	
+
+(C) Traditional machine learning-based vehicle re-id, 
+	Extracted features are directly computed from image pixels and its low level feature representation.
+	
+	Algorithms proposed for low level feature extraction
+		Speeded up robust features (SURF) [47],
+		scale-invariant feature transform (SIFT) [48], 
+		histogram of oriented gradient (HOG).
+		
+	After feature extraction different classifiers are applied, which are widely used in TMLapproaches such as linear regression, k-Nearest Neighbor (KNN) [49], logistic regression,support vector machine (SVM) [50], bayes classification [51], and decision tree [52]. 
+	
+	Zapletal andHerout [53] utilize the color histogram and the HOG features with linear regression tore-id vehicle. 
+	Chen et al. [54] designed a method to re-id vehicles grid-by-grid with HOGfeatures extraction for coarse search and further improves the result by utilizing histogramsof matching pairs.
+	
+	
+(D) View-aware-based vehicle re-id,
+
+	Most of the above discussed deep learning features [38,39,45] are general, and theselearned features end at multiple fully connected layers. 
+	
+	Despite that, all these approachesperformance is not bad. But these approaches are not designed for a specific problemrelated to view point variation. 
+	
+	Zhao et al. [64]designed a novel approach basedon person body parts guided for re-id. Wu et al. [65] proposed a study with pose prior
+	that made identification efficient and robust to viewpoint. Zheng et al. [66] proposedthe pose box structure that generates the pose estimation after affine transformations. Prokaj et al. [68] proposed a pose estimation-based approach to handle multipleviewpoint problem.
+	
+	Yi Zhou et al. [69] studied uncertainty in the viewpoint of vehicle re-idsystem and designed end to end deep learning-based architecture on Long Short-TermMemory (LSTM) bi-directional loop and concatenated CNN, in this model author takesfull advantage of LSTM and CNN to learn the different viewpoints of vehicle. 
+	
+(E) Fine-grained visual recognition-based vehicle re-id, 
+	Divided into two parts, representation learning model and part-based model. 
+	
+	Manyapproaches are proposed [60] that utilize alignment and part localization for feature extraction of main parts and then those parts are compared for vehicle re-id. 
+	
+		Reinforcement learning to getdiscriminative parts of vehicle.
+		Bilinear architectureto get the pair of local features
+		Utilize shape and lights of vehicle visible in night 
+		
+		
+	In fine-grained recognition, local region features are extracted from different pointssuch as logo, annual inspection stickers, and decorations, to make system more efficientand robust various attributes of vehicles are also incorporated like color, model, and typeinformation. 
+	
+(F) Generative adversarial network-based vehicle re-id, 
+
+(G) Attention mechanism, 
+(H) License plate-based vehicle re-id.
