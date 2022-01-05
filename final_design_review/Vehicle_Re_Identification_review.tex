@@ -87,6 +87,50 @@ Eight different techniques have been employed in this researcharea:
 	In fine-grained recognition, local region features are extracted from different pointssuch as logo, annual inspection stickers, and decorations, to make system more efficientand robust various attributes of vehicles are also incorporated like color, model, and typeinformation. 
 	
 (F) Generative adversarial network-based vehicle re-id, 
-
+	GAN [71] is one of the hot technique in semi-supervised and unsupervised learningalgorithms. It is proposed by deriving backpropagation signals througha competitive process involving a pair of networks. 
+	
+	Generative Adversarial Network (GAN) in Object re-id is among the
+	latest research trends in the deep learning approaches. 
+	
+	Zhou et al. [78] proposed GAN based model to solve cross-view vehicle re-id problem bygenerating vehicle images in different viewpoints. Lou et al. [74] designed a model togenerate the same and cross-view vehicle images from original images to facilitate training model. 
+	
 (G) Attention mechanism, 
+	Researchers are trying hard to design an efficient attention-based neural network forvision-related applications. Such as image classification [80], fine-grained image recognition [81], action recognition [82], and re-id [83]. The commonly followed strategy in theseapproaches is integrating a hard part selection subnet work or soft mask branch into the deep networks. 
+	
+	Zhao et al. [84] studied the part-localization CNN for predicting
+	salient parts and features of these parts exploit for person re-id. Wang et al. [80] utilizesresidual learning technique [41] to develop the Residual Attention unit for soft mask learning and gained significant image classification results. 
+	
 (H) License plate-based vehicle re-id.
+
+	Simply the system’s ability to automatically detect, extract, and recognize license plate characters automatically from vehicle image.
+	An automatic License plate recognition (LPR) system is mainly divided into two parts, first license plate detection andsecond, interpreting the vehicle license plate image into numerically readable form. 
+	
+	Li and Shen [91] studied a sequence labelling-based approach using recurrent neural networks (RNN). Super-resolution is also proposed to
+	restore a license plate image to improve performance. Shi et al. [92] designed convolutional recurrent neural network (CRNN) for scene text recognition that incorporates featureextraction, transcription and sequence modeling into a unified framework. 
+
+
+
+\textit{\textbf{Hybrid Methods-Based Vehicle Re-Identification
+}}
+Researchershave proposed the approaches in which they combined the two or more different techniques.
+
+Liu et al. [42] proposed a framework with name PROVID, in thisframework author not only consider the visual appearance of vehicle for re-id system, butalso exploits the license plate and spatio-temporal cues of vehicle 
+
+Jiang et al. [98] studied vehicle re-id algorithm using appearance and contextual information, author examines the multiple attributes during training like vehicle model, color, andvehicle image features individual respectively and sort vehicles on the bases of spatio-temporal cues. 
+
+Shen et al. [97] designed a two-step architecture, a pair of query vehicleimages with contextual information and visual temporal path are produced using MarkovRandom Fields (MRF) chain model, and then the similarity score is generated.
+
+
+
+
+
+
+\textbf{\textit{Evaluation}}
+To measure the performance of vehicle re-id approaches, thecumulative matching characteristics (CMC), curve HIT@1 and HIT@5 are commonly used
+by researchers. CMC curve provides the probability that an input image identity appears in a different-sized gallery set. The cumulative number of correctlymatched inputs is demonstrated based on the rank list in which inputs are re-identified.
+Moreover, HIT@1 is precision at rank-1 and HIT@5 is precision at rank-5. Rank is utilized tomeasure the matching score of test image to its own class, and higher value of rank indicatesthe improved performance of the system. 
+
+
+Besides, CMC curves, ifmultiple ground truths for each query image in the gallery set are available, mean averageprecision (mAP) is used to measure the overall performance for vehicle re-id system. The mAP measures the overall performance of vehicle re-id system.
+
+Another way by which vehicle re-id techniques performance can be evaluated is theconfusion matrix. A confusion matrix consists of various columns and rows; it depends onthe number of classes. It’s diagonal represents the recognizing accuracy or true classificationand off-diagonal express the misclassification.
