@@ -12,3 +12,7 @@
 - https://en.wikipedia.org/wiki/Advanced_Traffic_Management_System
 - https://aryaomnitalk.com/advanced-traffic-management-system-atms/
 - 
+
+
+### Papers 
+- [CityFlow: A City-Scale Benchmark for Multi-Target Multi-Camera Vehicle Tracking and Re-Identification](https://arxiv.org/pdf/1903.09254)
