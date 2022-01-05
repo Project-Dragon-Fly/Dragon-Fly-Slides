@@ -1,0 +1,55 @@
+Real-Time Vehicle Make and ModelRecognition System \cite{manzoor2019real}
+
+A Vehicle Make and Model Recognition (VMMR) 
+
+Few of the challenges are image acquisition, variations in illuminations and weather, occlusions, shadows,reflections, large variety of vehicles, inter-class and intra-class similarities, addition/deletion of vehicles’ models over time, etc. 
+
+
+We extract imagefeatures from vehicle images and create feature vectors to represent the dataset. 
+We use two classificationalgorithms, Random Forest (RF) and Support Vector Machine (SVM), 
+
+The proposed VMMR system recognizes vehicles on the basis of make, model, andgeneration (manufacturing years) while the existing VMMR systems can only identify the make andmodel.
+
+Comparison with existing VMMR research demonstrates superior performance of the proposedsystem in terms of recognition accuracy and processing speed.
+
+
+Computer vision techniques are used to express images in fewer attributes that characterize vehicles.
+Machine learning techniques are used to classify the vehicles. 
+
+The globalfeature representation module may generate a model for the encoding of images’ features depending onthe applied technique.
+The classifier module produces a model as a result of the training process
+that is then used by the testing module to predict the outcome for the newly examined images. 
+
+The proposed system works without the global feature representation
+component. 
+
+The extracted features are directly fed into the classifier. The omission of the global featurerepresentation component improves the processing speed of the VMMR without degrading the recognition accuracy.
+
+
+We define the ROI to represent the part of the vehiclein the image that provides the discriminative and prominent features. The discriminative and prominentfeatures are easily distinguishable between different vehicles. We have the frontal vehicle images in ourwork to design the VMMR and used bumper, front lights, and bonnet area as ROI
+
+
+As we increase thenumber of blocks in HOG the computational time increases.
+
+The VMMR system performance depends on mainly two elements. The first element is therepresentation of dataset which includes the feature extraction techniques and global feature representationtechniques. The second element is the machine learning classification algorithm. Both featurerepresentation and machine learning algorithm affect the VMMR system. 
+
+Observing the accuraciesof SVM-VMMR and RF-VMMR, we can see that the SVM-VMMR performs better than RF-VMMR. 
+
+
+Areal-time VMMR system installed on a four-lane highway, covering both sides, is required to process sixvehicles per second approximately in order to analyze entire traffic flow
+
+
+
+This work presents a real-time VMMR system with better performance than existing VMMR systemsin terms of recognition rate and processing speed.
+
+The proposed system works well in challengingsituations where vehicles are partially occluded, partially out of the image frame or poorly visible due tolow lighting. 
+
+This system can provide great value in terms of vehicle monitoring and identification basedon vehicle appearance instead of the vehicles’ attached license plate. 
+
+The existing VMMR research focuseson recognizing vehicles sufficiently to report only their make and model. We have included generation as
+another parameter. 
+
+Although the proposed VMMR system outperforms the previous systems, it can be further enhanced.Image feature vectors have a large number of features/dimensions. 
+
+Dimensionality reduction techniquescan be explored to reduce this number. A publicly available better and larger dataset with more vehicle
+types will benefit the research in this area. Deep learning techniques can also be explored with a biggerdataset.
