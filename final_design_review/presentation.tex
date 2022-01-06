@@ -199,24 +199,30 @@ system. (tracking the suspicious vehicle, handling traffic jam etc)
 
 \subsection{Technology used}
 \begin{frame}{Technology used}
+	
 \end{frame}
 
 \subsection{Dataset}
 \begin{frame}{Dataset}
 	\begin{block}{Input}
 		\begin{itemize}
-			\item Video
-			\item Query
+			\item Video Stream : From fixed surveillance network at 720p, 24fps
+			\item Query : Natural Language Query (eg: Red Honda car at Thaliparamba)
 		\end{itemize}
 	\end{block}
 
 	\begin{block}{Storage}
+		\begin{itemize}
+			\item MongoDB - Vehicle description, Queries
+			\item Postgres - Auth, Cam-config, Scheduler task list
+			\item MinIO - Video files, Snaps
+		\end{itemize}	
 	\end{block}
 
 	\begin{block}{Output}
 		\begin{itemize}
-			\item Vector points
-			\item Map
+			\item Vehicle Description list with place \& time stamp
+			\item Rendered Map showing traversed routes
 		\end{itemize}
 	\end{block}
 \end{frame}
