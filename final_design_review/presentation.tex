@@ -77,7 +77,8 @@
     \begin{itemize}
     	\item Increased accessibility of road transportation system massively increase in road traffic, carbon dioxide emissions, road accident risks.
     	
-    	\item Traffic management authorities faces hectic challenges to maintain an undisturbed transportationsystem. (tracking the suspicious vehicle, handling traffic jam etc)
+    	\item Traffic management authorities faces hectic challenges to maintain an undisturbed transportation
+system. (tracking the suspicious vehicle, handling traffic jam etc)
     	
     	\item The wide gap in human resource availability and the tedious effort required for traffic analysis (very huge data).
     \end{itemize}
@@ -187,15 +188,43 @@
 %########################################################################################
 
 \subsection{General Architecture}
-\begin{frame}{Architecture}
+\begin{frame}[allowframebreaks]{Architecture}
+	\begin{figure}
+		\includegraphics[width=0.95\textwidth]{res/pipeline1.png}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[height=0.8\textheight]{res/pipeline2.png}
+	\end{figure}
 \end{frame}
 
-\subsection{Detailed Design}
-\begin{frame}{Detailed Design}
+\subsection{Technology used}
+\begin{frame}{Technology used}
+	
 \end{frame}
 
 \subsection{Dataset}
 \begin{frame}{Dataset}
+	\begin{block}{Input}
+		\begin{itemize}
+			\item Video Stream : From fixed surveillance network at 720p, 24fps
+			\item Query : Natural Language Query (eg: Red Honda car at Thaliparamba)
+		\end{itemize}
+	\end{block}
+
+	\begin{block}{Storage}
+		\begin{itemize}
+			\item MongoDB - Vehicle description, Queries
+			\item Postgres - Auth, Cam-config, Scheduler task list
+			\item MinIO - Video files, Snaps
+		\end{itemize}	
+	\end{block}
+
+	\begin{block}{Output}
+		\begin{itemize}
+			\item Vehicle Description list with place \& time stamp
+			\item Rendered Map showing traversed routes
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 %########################################################################################
