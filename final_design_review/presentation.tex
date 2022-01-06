@@ -140,26 +140,25 @@
 %########################################################################################
 
 \section{Requirements}
-\subsection{Functional Requirements}
 \begin{frame}{Functional Requirements}
+	\begin{itemize}
+		\item Ability to track vehicles using visual feeds only
+		\item Query the vehicles using textual descriptions
+		\item Route tracking using single camera feed placed at multiple geographic locations
+		\item Map like interface for visualizing possible routes taken
+		
+	\end{itemize}
 \end{frame}
 
-\subsection{Non-functional Requirements}
 \begin{frame}{Non-functional Requirements}
     \begin{itemize}
-        \item To be used by non technical public - appealing and simple interface
-        \item Provide reliable and consistent information and service
-        \item Higher concerns on security of personal and public data.
-        \item Must account for mobility and agility.
+        \item Detection of features at low resolution
+        \item Real-time processing of live feeds
+        \item Optimization to pin-point specific vehicles from multiple intra class detection
+        \item Account for security of personal and public data.
+        \item Low processing and computation cost.
+        \item Optimized storage of detected descriptions
     \end{itemize}
-    
-    \begin{block}{Execution qualities}
-        Good interpretation of data which results reasonable processing of information, considering security of processed data.
-    \end{block}
-
-    \begin{block}{Evolution qualities}
-        Large volume of data needs to be interpreted and processed as clusters. Needs to account for scalability of resources and services, along with extension of new services.
-    \end{block}
 \end{frame}
 
 %########################################################################################
