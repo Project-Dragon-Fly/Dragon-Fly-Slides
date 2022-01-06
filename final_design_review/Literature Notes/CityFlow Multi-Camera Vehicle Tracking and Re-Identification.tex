@@ -1,0 +1,93 @@
+CityFlow: A City-Scale Benchmark for Multi-TargetMulti-Camera Vehicle Tracking and Re-Identification \cite{Tang_2019_CVPR}
+
+Urban traffic optimization using traffic cameras as sensors is driving the need to advance state-of-the-art multitarget multi-camera (MTMC) tracking. 
+
+To achieve this goal, one has to address three distinct but closely related research problems: 1) Detection and tracking of targets within a single camera, known as multi-target singlecamera (MTSC) tracking; 2) Re-identification of targetsacross multiple cameras, known as ReID; and 3) Detectionand tracking of targets across a network of cameras, known
+as multi-target multi-camera (MTMC) tracking. 
+
+
+The two main challenges in vehicleReID are small inter-class variability and large intra-classvariability, i.e., the variety of shapes from different viewingangles.
+
+A major limitation of existing benchmarks for objectReID is the limited spatial coverage and small number of cameras used.
+
+
+Prev literature
+	the cameras span less than 300 × 300 m2 ,with only 6 and 8 views, respectively. 
+	Do not provide the original videos orcamera calibration information. 
+	Assumes that image signaturesare grouped by correct identities within each camera, whichis not reflective of real tracking systems. 
+	Only the front and back views of thevehicles are available, thus limiting the variability due toviewpoint. 
+	
+	Most state-of-the-art approaches on thesebenchmarks exploit metric learning to classify object identities, where common loss functions include hard tripletloss [13], cross entropy loss [40], center loss [48], etc.
+	
+	On the other hand, the computation of deep learning features is costly, and thus spatio-temporal reasoning usingvideo-level information is key to applications in the realworld. 
+	
+
+In this paper
+The firstbenchmark at city scale for MTMC tracking
+the nature of the synchronized high-quality videos,
+the large spatial expanse captured by thedataset. 
+
+contains the largest number of cameras (40) from a largenumber of intersections (10) 
+covering a variety of scenes 
+fully labeled, homography matrices that relate pixellocations to GPS coordinates are available to enable precise spatial localization. 
+
+
+It is important to leverage the spatio-temporal
+information to address the city-scale problem properly.
+
+
+
+For the person ReID problem, the state-of-the-art applymetric learning with different loss functions, such as hardtriplet loss (Htri) [13], cross entropy loss (Xent) [40], center loss (Cent) [48], and their combination to train classifiers [62]. 
+
+In our experiments, we compared the performance of various convolutional neural network (CNN) models [12, 54, 16, 51, 17, 38, 36], which are all trainedusing the same learning rate (3e-4), number of epochs (60),batch size (32), and optimizer (Adam). 
+
+For the vehicle ReID problem, the recent work [18] ex-
+plores the advances in batch-based sampling for triplet em-
+bedding that are used for state-of-the-art in person ReID
+solutions. They compared different sampling variants and
+demonstrated state-of-the-art results on all vehicle ReID
+benchmarks [28, 26, 52], outperforming multi-view-based
+embedding and most spatio-temporal regularizations (see
+Tab. 7). Chosen sampling variants include batch all (BA),
+batch hard (BH), batch sample (BS) and batch weighted
+(BW), adopted from [13, 35]. The implementation uses
+MobileNetV1 [15] as the backbone neural network architec-
+ture, setting the feature vector dimension to 128, the learn-
+ing rate to 3e-4, and the batch size to 18 × 4.
+
+
+
+
+5.2. MTSC tracking and object detection
+Reliable cross-camera tracking is built upon accurate
+tracking within each camera (MTSC). 
+
+As for MTSC trackers, TC [43], theonly offline method, performs better according to most of the evaluation metrics. 
+
+
+MTMC tracking is a joint process of visual-spatio-temporal reasoning. 
+For these experiments, we first applyMTSC tracking, then sample a number of signatures fromeach trajectory in order to extract and compare appearance features. The number of sampled instances from each vehi-
+cle is empirically chosen as 3. 
+
+Note also that,since only trajectories spanning multiple cameras are in-
+cluded in the evaluation, different from MTSC tracking,false positives are considered in the calculation of MTMCtracking accuracy.
+
+
+We can also conclude from Tab 9 that the
+choice of image-based ReID and MTSC tracking methods
+has a significant impact on overall performance, as those
+methods achieving superior performance in their sub-tasks
+also contribute to higher MTMC tracking accuracy.
+
+
+We proposed a city-scale benchmark, CityFlow, which
+enables both video-based MTMC tracking and image-based
+ReID tasks. 
+
+Our major contribution is three-fold.
+	CityFlow is the first attempt towards city-scale applicationsin traffic understanding. 
+	
+	CityFlow is also the first benchmark tosupport vehicle-based MTMC tracking, by providing annotations for the original videos, the camera geometry, andcalibration information. The provided spatio-temporal information can be leveraged to resolve ambiguity in image based ReID.
+	
+	Third, we conducted extensive experimentsevaluating the performance of state-of-the-art approacheson our benchmark, comparing and analyzing various visual-spatio-temporal association schemes. 
+	
