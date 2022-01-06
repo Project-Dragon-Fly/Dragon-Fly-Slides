@@ -214,6 +214,7 @@ system. (tracking the suspicious vehicle, handling traffic jam etc)
 		\item Processing User Queries - Search Engine System (Elastic Search)
 		\item Detection Engine - SSD mobileNet model, Tensorflow object detection API
 		\item Data Storage - MinIO, Postgres(RDBMS), MongoDB
+		\item Consumer \& queue- Celery, Kombu, RabbitMQ 
 		\item Deployment \& Infrastructure Management:
 		\begin{itemize}
 			\item Kubernetes (Multinode Systems)
@@ -225,7 +226,7 @@ system. (tracking the suspicious vehicle, handling traffic jam etc)
 \end{frame}
 
 \subsection{Dataset}
-\begin{frame}{Dataset}
+\begin{frame}{Dataset I}
 	\begin{block}{Input}
 		\begin{itemize}
 			\item Video Stream : From fixed surveillance network at 720p, 24fps
@@ -249,6 +250,22 @@ system. (tracking the suspicious vehicle, handling traffic jam etc)
 	\end{block}
 \end{frame}
 
+\begin{frame}[allowframebreaks]{Dataset Sample - surveillance Camera}
+	\begin{figure}
+		\includegraphics[width=0.95\textwidth]{res/dataset_sample.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Detection Engine - Sample demo}
+	\begin{figure}
+		\includegraphics[width=0.95\textwidth]{res/detection_demo.png}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[height=0.8\textheight]{res/detection_demo2.png}
+	\end{figure}
+\end{frame}
+
+
 %########################################################################################
 
 \section{Work done so far}
@@ -262,17 +279,30 @@ system. (tracking the suspicious vehicle, handling traffic jam etc)
 \end{enumerate}
 \end{frame}
 
+
 %########################################################################################
 
 \section{Work planned}
 \begin{frame}{Work Planned}
 \begin{enumerate}
-    \item Data set collection
-    \item Feature extraction
-    \item Pre-Processing
-    \item Output validation
-    \item Integration
-    \item Implementation    
+	\item Detection Engine
+		\begin{itemize}
+			\item Data set collection
+			\item Pre-Processing
+			\item Output validation
+			\item Integration
+		\end{itemize}
+	\item Backend System
+		\begin{itemize}
+			\item Elastic Search based Search Engine \& Query Processor 
+			\item Authentication \& Permission System
+			\item Notification Service
+			\item Job Queue \& Consumer 
+			\item Integration
+		\end{itemize}
+    \item Deployment
+    
+
 \end{enumerate}
 \end{frame}
 
