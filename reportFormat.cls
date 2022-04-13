@@ -11,6 +11,12 @@
 \usepackage{float}
 \usepackage{fullpage}
 \usepackage{hyperref}
+\hypersetup{
+	colorlinks=true, %set true if you want colored links
+	linktoc=all,     %set to all if you want both sections and subsections linked
+	linkcolor=black,  %choose some color if you want links to stand out
+    urlcolor=black
+}
 
 
 %----------------------------------------------------------------------------------------
