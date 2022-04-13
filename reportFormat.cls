@@ -10,6 +10,7 @@
 \usepackage{pgffor}
 \usepackage{float}
 \usepackage{fullpage}
+\usepackage{hyperref}
 
 
 %----------------------------------------------------------------------------------------
@@ -51,6 +52,7 @@
 \renewcommand{\document}
 {	\ori@document  % Begin document
 	\renewcommand{\arraystretch}{1.25}
+	\setstretch{1.50}
 	\begin{center}
 		\textbf{\Large \@nameOfProject} \\
 		Project Report \\
@@ -72,4 +74,5 @@
 		\end{tabular}
 	\end{table}
 	\renewcommand{\arraystretch}{1}
+	\setstretch{1.25}
 }
