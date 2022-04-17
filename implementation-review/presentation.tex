@@ -164,7 +164,7 @@
 					Current mAP               & 96.7 \%                  \\ \hline
 					Current Iterations        & 4800                     \\ \hline
 					DataSet & \begin{tabular}[c]{@{}l@{}}500 till 2800 iteration\\ 733 after wards\end{tabular} \\ \hline
-					Approx Hrs Spent training & 20-24 hrs                \\ \hline
+					Approx Hrs Spent training & 25-30 hrs                \\ \hline
 				\end{tabular}%
 			}
 		\end{table}
@@ -177,32 +177,36 @@
 		\end{center}
 	
 		\newpage
-		detections\_count = 7729, unique\_truth\_count = 1956  \\ 
-		class\_id = 0, name = auto, ap = 97.27\%   	 (TP = 285, FP = 15) \\
-		class\_id = 1, name = bus, ap = 99.76\%   	 (TP = 217, FP = 10) \\
-		class\_id = 2, name = tempo traveller, ap = 96.50\%   	 (TP = 57, FP = 3) \\
-		class\_id = 3, name = tractor, ap = 98.93\%   	 (TP = 131, FP = 1) \\
-		class\_id = 4, name = truck, ap = 99.20\%   	 (TP = 346, FP = 36) \\
-		class\_id = 5, name = van, ap = 96.71\%   	 (TP = 98, FP = 21) \\
-		class\_id = 6, name = two wheeler, ap = 88.59\%   	 (TP = 480, FP = 104) \\
-		class\_id = 7, name = car, ap = 93.92\%   	 (TP = 216, FP = 39) \\
-		class\_id = 8, name = jcb, ap = 100.00\%   	 (TP = 0, FP = 0) \\
-		
-		for conf\_thresh = 0.25, precision = 0.89, recall = 0.94, F1-score = 0.91  \\
-		for conf\_thresh = 0.25, TP = 1830, FP = 229, FN = 126, average IoU = 72.94 \%  \
-		
-		IoU threshold = 50 \%, used Area-Under-Curve for each unique Recall  \\
-		mean average precision (mAP@0.50) = 0.967638, or 96.76 \% \\
-		Total Detection Time: 268 Seconds
-		
+		\begin{scriptsize}
+			detections\_count = 7729, unique\_truth\_count = 1956  \\ 
+			class\_id = 0, name = auto, ap = 97.27\%   	 (TP = 285, FP = 15) \\
+			class\_id = 1, name = bus, ap = 99.76\%   	 (TP = 217, FP = 10) \\
+			class\_id = 2, name = tempo traveller, ap = 96.50\%   	 (TP = 57, FP = 3) \\
+			class\_id = 3, name = tractor, ap = 98.93\%   	 (TP = 131, FP = 1) \\
+			class\_id = 4, name = truck, ap = 99.20\%   	 (TP = 346, FP = 36) \\
+			class\_id = 5, name = van, ap = 96.71\%   	 (TP = 98, FP = 21) \\
+			class\_id = 6, name = two wheeler, ap = 88.59\%   	 (TP = 480, FP = 104) \\
+			class\_id = 7, name = car, ap = 93.92\%   	 (TP = 216, FP = 39) \\
+			class\_id = 8, name = jcb, ap = 100.00\%   	 (TP = 0, FP = 0) \\
+			
+			for conf\_thresh = 0.25, precision = 0.89, recall = 0.94, F1-score = 0.91  \\
+			for conf\_thresh = 0.25, TP = 1830, FP = 229, FN = 126, average IoU = 72.94 \%  \
+			
+			IoU threshold = 50 \%, used Area-Under-Curve for each unique Recall  \\
+			mean average precision (mAP@0.50) = 0.967638, or 96.76 \% \\
+			Total Detection Time: 268 Seconds
+		\end{scriptsize}		
 		\newpage
 		
+		\begin{center}
+			\includegraphics[width=\linewidth]{res/data_set1/predictions}
+		\end{center}
 	\end{frame}
 
 
 	\begin{frame}[allowframebreaks]{Building custom YOLOv4 model}
-		\framesubtitle{Dataset information}
-		Fetched from \link{https://www.kaggle.com/datasets/dataclusterlabs/indian-vehicle-dataset}{Kaggle}
+		\framesubtitle{Dataset information (from internet)}
+		Fetched from \link{https://www.kaggle.com/datasets/dataclusterlabs/indian-vehicle-dataset}{Kaggle}. Used labelImg to label images. 
 		\begin{table}[]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -232,9 +236,36 @@
 		\end{figure}
 	\end{frame}
 
+
+	\begin{frame}[allowframebreaks]{Building custom YOLOv4 model}
+		\framesubtitle{Dataset information (from camera network)}
+		Fetched from camera infrastructure. Used labelImg to label images.
+		\begin{center}
+			\includegraphics[width=\linewidth]{res/data_set2/custom_label_stat}
+		\end{center}
+		
+		\newpage
+		\begin{figure}
+			\includegraphics[width=0.48\linewidth]{"res/data_set2/image1"} \hfill
+			\includegraphics[width=0.48\linewidth]{"res/data_set2/image2"}
+			\\[\smallskipamount]
+			\includegraphics[width=0.48\linewidth]{"res/data_set2/image3"} \hfill
+			\includegraphics[width=0.48\linewidth]{"res/data_set2/image4"}
+		\end{figure}
+	\end{frame}
+
+
 	\subsection{UI/UX}	
-	\begin{frame}{Works done : UI/UX}
-		User Interface updates
+	\begin{frame}{Login page}
+		\begin{center}
+			\includegraphics[width=1\linewidth]{res/loginpage}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Home page}
+		\begin{center}
+			\includegraphics[width=1\linewidth]{res/homepage}
+		\end{center}
 	\end{frame}
 
 	\subsection{Other Updates}
