@@ -150,8 +150,86 @@
 	\end{frame}
 
 	\begin{frame}{Building custom YOLOv4 model}
-		content
+		\framesubtitle{Model Information}
+		See code at \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Colab/indian\_vehicle\_detection.ipynb}{notebook}
+		\begin{table}[]
+			\centering
+			\resizebox{\textwidth}{!}{%
+				\begin{tabular}{|l|l|}
+					\hline
+					Framework used            & DarkNet                  \\ \hline
+					Initial weight            & official 80 class weight \\ \hline
+					Target classes            & 9                        \\ \hline
+					Platform for training     & Google Colab             \\ \hline
+					Current mAP               & 96.7 \%                  \\ \hline
+					Current Iterations        & 4800                     \\ \hline
+					DataSet & \begin{tabular}[c]{@{}l@{}}500 till 2800 iteration\\ 733 after wards\end{tabular} \\ \hline
+					Approx Hrs Spent training & 20-24 hrs                \\ \hline
+				\end{tabular}%
+			}
+		\end{table}
+	\end{frame}
 
+	\begin{frame}[allowframebreaks]{Building custom YOLOv4 model}
+		\framesubtitle{Current Model evaluation}
+		\begin{center}
+			\includegraphics[height=0.7\textheight]{res/darknet_training_chart}
+		\end{center}
+	
+		\newpage
+		detections\_count = 7729, unique\_truth\_count = 1956  \\ 
+		class\_id = 0, name = auto, ap = 97.27\%   	 (TP = 285, FP = 15) \\
+		class\_id = 1, name = bus, ap = 99.76\%   	 (TP = 217, FP = 10) \\
+		class\_id = 2, name = tempo traveller, ap = 96.50\%   	 (TP = 57, FP = 3) \\
+		class\_id = 3, name = tractor, ap = 98.93\%   	 (TP = 131, FP = 1) \\
+		class\_id = 4, name = truck, ap = 99.20\%   	 (TP = 346, FP = 36) \\
+		class\_id = 5, name = van, ap = 96.71\%   	 (TP = 98, FP = 21) \\
+		class\_id = 6, name = two wheeler, ap = 88.59\%   	 (TP = 480, FP = 104) \\
+		class\_id = 7, name = car, ap = 93.92\%   	 (TP = 216, FP = 39) \\
+		class\_id = 8, name = jcb, ap = 100.00\%   	 (TP = 0, FP = 0) \\
+		
+		for conf\_thresh = 0.25, precision = 0.89, recall = 0.94, F1-score = 0.91  \\
+		for conf\_thresh = 0.25, TP = 1830, FP = 229, FN = 126, average IoU = 72.94 \%  \
+		
+		IoU threshold = 50 \%, used Area-Under-Curve for each unique Recall  \\
+		mean average precision (mAP@0.50) = 0.967638, or 96.76 \% \\
+		Total Detection Time: 268 Seconds
+		
+		\newpage
+		
+	\end{frame}
+
+
+	\begin{frame}[allowframebreaks]{Building custom YOLOv4 model}
+		\framesubtitle{Dataset information}
+		Fetched from \link{https://www.kaggle.com/datasets/dataclusterlabs/indian-vehicle-dataset}{Kaggle}
+		\begin{table}[]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\textbf{Frequency}    & \textbf{Label Name} \\ \hline
+				557                   & two wheeler         \\ \hline
+				354                   & truck               \\ \hline
+				297                   & auto                \\ \hline
+				233                   & car                 \\ \hline
+				220                   & bus                 \\ \hline
+				133                   & tractor             \\ \hline
+				101                   & van                 \\ \hline
+				1                     & jcb                 \\ \hline
+				\textbf{Total Boxes}  & \textbf{1956}       \\ \hline
+				\textbf{Total Images} & \textbf{733}        \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		
+		
+		\newpage
+		\begin{figure}
+			\includegraphics[width=0.24\linewidth]{"res/data_set1/image1"} \hfill
+			\includegraphics[width=0.24\linewidth]{"res/data_set1/image2"} \hfill
+			\includegraphics[width=0.24\linewidth]{"res/data_set1/image3"} \hfill
+			\includegraphics[width=0.24\linewidth]{"res/data_set1/image4"}
+		\end{figure}
 	\end{frame}
 
 	\subsection{UI/UX}	
