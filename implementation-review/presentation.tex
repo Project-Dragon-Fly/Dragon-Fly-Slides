@@ -9,6 +9,9 @@
 
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{hyperref}
+
+\newcommand{\link}[2]{\href{#1}{\textit{\color{blue}{#2}}}}%
 
 
 \title[DragonFly]{Project DragonFly: Vehicle Surveillance System}
@@ -76,6 +79,55 @@
 		\begin{center}
 			\includegraphics[width=\linewidth]{res/pipeline2}
 		\end{center}
+	\end{frame}
+
+
+	%---------------------------------------------------------------------------
+	% WORKS DONE SO FAR --------------------------------------------------------
+	%---------------------------------------------------------------------------
+
+	\section{Works done so far}
+	\subsection{AI model}
+	\begin{frame}{Experimented with Classical Object detection methods}
+		\begin{itemize}
+			\item K-Means algorithm used for color extraction
+				\link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Color\%20detection.ipynb}{notebook}
+			
+			\item Using OpenCV to detect object  
+				\link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/OpenCV-image-difference.ipynb}{notebook} $|$ 
+				\link{https://drive.google.com/file/d/1-2EAoUBxMzfnMO3tVJFJ0qvGnXMFp4zL/view}{video}
+			
+			\item Harr algorithm to detect Bus and Car
+				\link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/OpenCV\%20-\%20Haar\%20algo.ipynb}{notebook} $|$
+				\link{https://drive.google.com/file/d/1XYbVf6I2ZJSSdO2SsZECK9rNoYQwROM9/view}{video}
+		\end{itemize}
+		\begin{small}
+			Video are generated using the code mentioned in this \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Detection\_video\_generator.ipynb}{notebook}
+		\end{small}
+	\end{frame}
+
+	\begin{frame}{Exploring various AI methods}
+	\begin{itemize}
+		\item Several YouTube tutorials and web articles are referenced to get understanding of AI methods and its evolution, which are summarized in this \link{https://docs.google.com/presentation/d/1ugCdqNADQ1QNd91lMP4BmbFBKYhkMoDrN2yIf\_t7SkI/edit?usp=sharing}{google slides}.
+		
+		\item Tensorflow provided this \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/object\_detection\_tensorflow\_tutorial.ipynb}{notebook} showing the usage of mobile-ssd/f-rcnn to detect general objects.
+		
+		\item Followed through the beginners tutorial provided by Tensorflow Team, saved at \link{https://github.com/Project-Dragon-Fly/tutorial-trials/tree/tutorial\_testing/YouTube\%20Tutorial\%20-\%20TensorFlow}{github}.
+		\begin{itemize}
+			\item Emphasis on working of CNN
+			\item Got at glance at intermediate layer output of horse-human classifier. Output saved at  \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/YouTube\%20Tutorial\%20-\%20TensorFlow/Tutorial\%204\%20-\%20CNN\%20on\%20complex\%20images.ipynb}{notebook}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+	\subsection{UI/UX}	
+	\begin{frame}{Works done : UI/UX}
+		User Interface updates
+	\end{frame}
+
+	\subsection{Other Updates}
+	\begin{frame}{Works done : Other updates}
+		Other updates
 	\end{frame}
 
 \end{document} 
