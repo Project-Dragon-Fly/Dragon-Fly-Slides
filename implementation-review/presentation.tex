@@ -107,18 +107,41 @@
 	\end{frame}
 
 	\begin{frame}{Exploring various AI methods}
-	\begin{itemize}
-		\item Several YouTube tutorials and web articles are referenced to get understanding of AI methods and its evolution, which are summarized in this \link{https://docs.google.com/presentation/d/1ugCdqNADQ1QNd91lMP4BmbFBKYhkMoDrN2yIf\_t7SkI/edit?usp=sharing}{google slides}.
-		
-		\item Tensorflow provided this \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/object\_detection\_tensorflow\_tutorial.ipynb}{notebook} showing the usage of mobile-ssd/f-rcnn to detect general objects.
-		
-		\item Followed through the beginners tutorial provided by Tensorflow Team, saved at \link{https://github.com/Project-Dragon-Fly/tutorial-trials/tree/tutorial\_testing/YouTube\%20Tutorial\%20-\%20TensorFlow}{github}.
 		\begin{itemize}
-			\item Emphasis on working of CNN
-			\item Got at glance at intermediate layer output of horse-human classifier. Output saved at  \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/YouTube\%20Tutorial\%20-\%20TensorFlow/Tutorial\%204\%20-\%20CNN\%20on\%20complex\%20images.ipynb}{notebook}
+			\item Several YouTube tutorials and web articles are referenced to get understanding of AI methods and its evolution, which are summarized in this \link{https://docs.google.com/presentation/d/1ugCdqNADQ1QNd91lMP4BmbFBKYhkMoDrN2yIf\_t7SkI/edit?usp=sharing}{google slides}.
+			
+			\item Tensorflow provided this \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/object\_detection\_tensorflow\_tutorial.ipynb}{notebook} showing the usage of mobile-ssd/f-rcnn to detect general objects.
+			
+			\item Followed through the beginners tutorial provided by Tensorflow Team, saved at \link{https://github.com/Project-Dragon-Fly/tutorial-trials/tree/tutorial\_testing/YouTube\%20Tutorial\%20-\%20TensorFlow}{github}.
+			\begin{itemize}
+				\item Emphasis on working of CNN
+				\item Got at glance at intermediate layer output of horse-human classifier. Output saved at  \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/YouTube\%20Tutorial\%20-\%20TensorFlow/Tutorial\%204\%20-\%20CNN\%20on\%20complex\%20images.ipynb}{notebook}
+			\end{itemize}
 		\end{itemize}
-	\end{itemize}
-\end{frame}
+	\end{frame}
+
+	\begin{frame}[allowframebreaks]{Notable GitHub repository}
+		\begin{itemize}
+			\item The \link{https://github.com/theAIGuysCode/yolov4-deepsort.git}{theAIGuysCode} uses 
+			\begin{itemize}
+				\item \textbf{YOLO model} to detect vehicles
+				\item \textbf{deep-sort} model to track movement
+			\end{itemize}
+			Few observations
+			\begin{itemize}
+				\item Real-time speed achieved
+				\item Implemented in python - TensorFlow
+				\item Tracking is not accurate - affected by object occlusion, accuracy of YOLO, near identical objects, closely spaced objects, sudden non-linear movement.
+			\end{itemize}
+			Tried-out the repo \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Colab/obj\%20detection\%20and\%20tracking.ipynb}{notebook} $|$ \link{https://drive.google.com/file/d/172r\_jCelsVzNxqjhgWjvTbXkcNGTN4Yl/view?usp=sharing}{video1} $|$ \link{https://drive.google.com/file/d/1EwC8sfuPR-gbwt8udMf6tlxATn6Ud3oA/view?usp=sharing}{video2} $|$
+			\link{https://drive.google.com/file/d/1-4hTbPk6xC-Cb58G2ZXE6qi6WpWuD-XT/view?usp=sharing}{video3}
+			
+			
+			\item The \link{https://github.com/taipingeric/yolo-v4-tf.keras}{taipingeric/yolo-v4-tf.keras} trained in YOLOv4, keras implementation. \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Colab/YOLO-v4-tf-keras.ipynb}{notebook} $|$ \link{https://drive.google.com/file/d/16xsOZQjN-lKYAu7g7dlDvQIyyQhyfaBk/view?usp=sharing}{video1} $|$
+			\link{https://drive.google.com/file/d/1ANPDVv4ZV2bVCmAM9H7SVpTrf3Pj9CIf/view?usp=sharing}{video2} $|$
+			\link{https://drive.google.com/file/d/1-6vzo6-AmHlTGrR0W20heivqQ1uCJUQe/view?usp=sharing}{video3}
+		\end{itemize}
+	\end{frame}
 
 	\subsection{UI/UX}	
 	\begin{frame}{Works done : UI/UX}
