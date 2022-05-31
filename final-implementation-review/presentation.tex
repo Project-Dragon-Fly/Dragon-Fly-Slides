@@ -24,6 +24,20 @@
 }
 \date{\today}
 
+%Design Diagram/ Algorithm
+%Results
+%Result -Analysis( Use graphs/ metric relevent to your work )
+%Conclusion
+%Future Scope
+%References
+
+% contribution ( open prb)
+% design
+% methologies
+% model implementation details
+% result analysis
+% challange and future emprovemtns
+
 \begin{document}
 	
 	%---------------------------------------------------------------------------
@@ -44,12 +58,73 @@
 	%---------------------------------------------------------------------------
 
 	\section{Introduction}
-	\subsection{Objective}
-	\begin{frame}{Objective}
-		
+	\subsection{Motivation}
+	\begin{frame}{Motivation}		
 		Policing agencies have setup vast networks of distributed surveillance cameras along major routes. The sheer amount of data generated is overwhelming for manual analysis, to trace routes of rouge vehicles.\\~\\
+		
+		Current system make use of manual approach of reviewing long video
+		clips to identify the suspect vehicle. Various possible routes that can
+		be taken by suspect further makes the process of re-identification very
+		difficult and time consuming.\\~\\
 				
 		DragonFly is an AI based project that aims to resolve this particular issue. 
+	\end{frame}
+
+	\subsection{Objective}
+	\begin{frame}{Objective}
+		\begin{itemize}
+			\item Aid in traffic policing by extracting and detecting various vehicle
+			description
+			\item Generate route map for a specific vehicle description, along with
+			timestamps
+			\item Conduct traffic analysis to predict traffic flow with existing sensor
+			network.
+			\item System is to be used by general public, which accounts for
+			unstructured input of vehicle description.
+		\end{itemize}
+	\end{frame}
+
+	\subsection{Literature Review}
+	\begin{frame}{Literature Review}
+		\begin{table}[!h]
+			\centering
+			\resizebox{\textwidth}{!}{%
+				\begin{tabular}{|l|l|l|l|}
+					\hline
+					\multicolumn{1}{|c|}{\textit{\textbf{Title}}} &
+					\multicolumn{1}{c|}{\textit{\textbf{Method}}} &
+					\multicolumn{1}{c|}{\textit{\textbf{Pros and Cons}}} &
+					\multicolumn{1}{c|}{\textit{\textbf{Challenges}}} \\ \hline
+					\begin{tabular}[c]{@{}l@{}}CityFlow: A City-Scale \\ Benchmark for Multi-Target\\ Multi-Camera  Vehicle\\  Tracking and  \\ Re-Identification\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Use of Multi-Target Single Camera\\ and Multi-Target Multi-Camera \\ tracking.\\ \\ Use visual-spatio-temporal\\ reasoning\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Pros:\\ Better and faster results.,\\ Handle large scale recognition\\ Tracking and small prediction\\ \\ Cons:\\ Overlapping viewpoints,\\ Implemented only at junction \\ points\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}High quality videos\\ \\ Multiple viewpoints on \\ same object\\ \\ Require annotated videos\end{tabular} \\ \hline
+					\begin{tabular}[c]{@{}l@{}}Real-Time Vehicle Make and\\ Model Recognition System\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Random Forest and Support Vector\\  Machine coupled with traditional\\ Vehicle Make Model Recognition\\ System,\\ \\ Usage of Histogram of Oriented \\ Gradient (HOG) and GIST \\ features\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Pros:\\ Superior processing speed \& \\ recognition accuracy wrt existing \\ VMMR, Accounts for partial \\ viewpoints\\ \\ Cons:\\ High dimensional,  Region of \\ interest is only on parts, No global\\  representation\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Computational time increases\\ with increase of blocks HOG\\ \\ Limited Region of Interest\end{tabular} \\ \hline
+					\begin{tabular}[c]{@{}l@{}}Efficient and Deep Vehicle \\ Re-Identification Using \\ Multi-Level Feature \\ Extraction\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Global channel extracts single \\ feature generalizing whole image,\\ \\ Local channel extract multiple\\  local features (logo, stickers),\\ \\ Attribute channel extracts \\ color, model, type\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Pros:\\ Extraction of inter and intra features,\\ Data augmentation with license plate \\ verification\\ \\ Cons:\\ Requires Data augmentation,\\ Effected by illuminations\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Cross camera vehicle tracking\\ \\ Changes in color response\\ \\ Background clutter\end{tabular} \\ \hline
+				\end{tabular}%
+			}
+		\end{table}
+		% include NVIDIA AI challange, papers regarding yolov4, paddlepaddle, github repository
+	\end{frame}
+
+	\subsection{Problem Statement}
+	\begin{frame}{Problem Statement}
+		A novel approach to provide an integrated platform utilizing existing infrastructure to monitor transport sector, and extend timely information to policing agencies, with intuitive interface.
+	\end{frame}
+
+	\begin{frame}{Contributions}
+		\begin{itemize}
+			\item Custom YOLOv4 AI model trained on Indian vehicles
+			\item Integration of various AI based algorithm and models (YOLOv4, deepSORT, siamese Network)
+			\item Simple user interface supporting elastic search
+			\item Optimization of back-end services that are containerized 
+		\end{itemize}
 	\end{frame}
 	
 	\subsection{Proposed System}
@@ -325,5 +400,12 @@ along with the detected frame at each camera points.
 			\end{itemize}
 		\end{itemize}
 	\end{frame}
+
+\section{References}
+\begin{frame}[allowframebreaks, noframenumbering]{References}
+	\nocite{*}
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEabrv,reference.bib}
+\end{frame}
 
 \end{document} 
