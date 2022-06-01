@@ -175,6 +175,27 @@
 	\end{frame}
 
 	\begin{frame}{YOLOv4}		
+		\framesubtitle{Model Parameters}
+		\begin{table}[]
+			\centering
+			\resizebox{\textwidth}{!}{%
+				\begin{tabular}{|l|l|}
+					\hline
+					Input size            & 416 * 416                    \\ \hline
+					Input Channels            & 3   \\ \hline
+					Batch size             & 32                          \\ \hline
+					learning rate    & 0.0013 \\ \hline								Final input to yolo layer        & [256*256],[512*512],[1024*1024]                       \\ \hline
+					Total Layers               & 162                     \\ \hline
+					
+					Target Classes & \begin{tabular}[c]{@{}l@{}}
+						auto, bus, tempo traveler, tractor, \\
+						truck, van, two wheeler, car, jcb\end{tabular} \\ \hline
+				\end{tabular}%
+			}
+		\end{table}
+	\end{frame}
+
+	\begin{frame}{YOLOv4}		
 		\framesubtitle{Model Training}
 		\begin{table}[]
 			\centering
@@ -194,25 +215,52 @@
 		\end{table}
 	\end{frame}
 
-	\begin{frame}{YOLOv4}		
-		\framesubtitle{Model Parameters}
+	\begin{frame}[allowframebreaks]{Dataset - Kaggle}
+		Fetched from \link{https://www.kaggle.com/datasets/dataclusterlabs/indian-vehicle-dataset}{Kaggle}. Used labelImg to label images. 
 		\begin{table}[]
 			\centering
-			\resizebox{\textwidth}{!}{%
-				\begin{tabular}{|l|l|}
-					\hline
-					Input size            & 416 * 416                    \\ \hline
-					Input Channels            & 3   \\ \hline
-					Batch size             & 32                          \\ \hline
-					learning rate    & 0.0013 \\ \hline								Final input to yolo layer        & [256*256],[512*512],[1024*1024]                       \\ \hline
-					Total Layers               & 162                     \\ \hline
-
-					Target Classes & \begin{tabular}[c]{@{}l@{}}
-						auto, bus, tempo traveler, tractor, \\
-						truck, van, two wheeler, car, jcb\end{tabular} \\ \hline
-				\end{tabular}%
-			}
+			\begin{tabular}{|l|l|}
+				\hline
+				\textbf{Frequency}    & \textbf{Label Name} \\ \hline
+				557                   & two wheeler         \\ \hline
+				354                   & truck               \\ \hline
+				297                   & auto                \\ \hline
+				233                   & car                 \\ \hline
+				220                   & bus                 \\ \hline
+				133                   & tractor             \\ \hline
+				101                   & van                 \\ \hline
+				1                     & jcb                 \\ \hline
+				\textbf{Total Boxes}  & \textbf{1956}       \\ \hline
+				\textbf{Total Images} & \textbf{733}        \\ \hline
+			\end{tabular}
 		\end{table}
+		
+		
+		
+		\newpage
+		\begin{figure}
+			\includegraphics[width=0.24\linewidth]{"res/data_set1/image1"} \hfill
+			\includegraphics[width=0.24\linewidth]{"res/data_set1/image2"} \hfill
+			\includegraphics[width=0.24\linewidth]{"res/data_set1/image3"} \hfill
+			\includegraphics[width=0.24\linewidth]{"res/data_set1/image4"}
+		\end{figure}
+	\end{frame}
+	
+	
+	\begin{frame}[allowframebreaks]{Dataset - Camera Network}
+		Fetched from camera infrastructure. Used labelImg to label images.
+		\begin{center}
+			\includegraphics[width=\linewidth]{res/data_set2/custom_label_stat}
+		\end{center}
+		
+		\newpage
+		\begin{figure}
+			\includegraphics[width=0.48\linewidth]{"res/data_set2/image1"} \hfill
+			\includegraphics[width=0.48\linewidth]{"res/data_set2/image2"}
+			\\[\smallskipamount]
+			\includegraphics[width=0.48\linewidth]{"res/data_set2/image3"} \hfill
+			\includegraphics[width=0.48\linewidth]{"res/data_set2/image4"}
+		\end{figure}
 	\end{frame}
 
 
@@ -263,80 +311,20 @@
 
 
 	%---------------------------------------------------------------------------
-	% WORKS DONE SO FAR --------------------------------------------------------
+	% RESULTS ------------------------------------------------------------------
 	%---------------------------------------------------------------------------
 
-	\section{Works done so far}
+	\section{Results}
 	\subsection{AI model}
-	\begin{frame}{Experimented with Classical Object detection methods}
-		\begin{itemize}
-			\item K-Means algorithm used for color extraction
-				\link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Color\%20detection.ipynb}{notebook}
-			
-			\item Using OpenCV to detect object  
-				\link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/OpenCV-image-difference.ipynb}{notebook} $|$ 
-				\link{https://drive.google.com/file/d/1-2EAoUBxMzfnMO3tVJFJ0qvGnXMFp4zL/view}{video}
-			
-			\item Harr algorithm to detect Bus and Car
-				\link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/OpenCV\%20-\%20Haar\%20algo.ipynb}{notebook} $|$
-				\link{https://drive.google.com/file/d/1XYbVf6I2ZJSSdO2SsZECK9rNoYQwROM9/view}{video}
-		\end{itemize}
-		\begin{small}
-			Video are generated using the code mentioned in this \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Detection\_video\_generator.ipynb}{notebook}
-		\end{small}
-	\end{frame}
-
-	\begin{frame}{Exploring various AI methods}
-		\begin{itemize}
-			\item Several YouTube tutorials and web articles are referenced to get understanding of AI methods and its evolution, which are summarized in this \link{https://docs.google.com/presentation/d/1ugCdqNADQ1QNd91lMP4BmbFBKYhkMoDrN2yIf\_t7SkI/edit?usp=sharing}{google slides}.
-			
-			\item Tensorflow provided this \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/object\_detection\_tensorflow\_tutorial.ipynb}{notebook} showing the usage of mobile-ssd/f-rcnn to detect general objects.
-			
-			\item Followed through the beginners tutorial provided by Tensorflow Team, saved at \link{https://github.com/Project-Dragon-Fly/tutorial-trials/tree/tutorial\_testing/YouTube\%20Tutorial\%20-\%20TensorFlow}{github}.
-			\begin{itemize}
-				\item Emphasis on working of CNN
-				\item Got at glance at intermediate layer output of horse-human classifier. Output saved at  \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/YouTube\%20Tutorial\%20-\%20TensorFlow/Tutorial\%204\%20-\%20CNN\%20on\%20complex\%20images.ipynb}{notebook}
-			\end{itemize}
-		\end{itemize}
-	\end{frame}
-
-	\begin{frame}[allowframebreaks]{Notable GitHub repository}
-		\begin{itemize}
-			\item The official \link{https://github.com/ahmetozlu/tensorflow\_object\_counting\_api}{TensorFlow object counting api}. Houses various models (TensorFlow Model garden), tutorial notebooks. 
-			
-			\item The \link{https://github.com/taipingeric/yolo-v4-tf.keras}{taipingeric/yolo-v4-tf.keras} trained in YOLOv4, keras implementation. \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Colab/YOLO-v4-tf-keras.ipynb}{notebook} $|$ \link{https://drive.google.com/file/d/16xsOZQjN-lKYAu7g7dlDvQIyyQhyfaBk/view?usp=sharing}{video1} $|$
-			\link{https://drive.google.com/file/d/1ANPDVv4ZV2bVCmAM9H7SVpTrf3Pj9CIf/view?usp=sharing}{video2} $|$
-			\link{https://drive.google.com/file/d/1-6vzo6-AmHlTGrR0W20heivqQ1uCJUQe/view?usp=sharing}{video3}
-			
-			\item Object Detection toolkit based on \link{https://github.com/PaddlePaddle/PaddleDetection}{PaddlePaddle}. It supports object detection, instance segmentation, multiple object tracking and real-time multi-person keypoint detection.
-			
-			\item Object Detection and Multi-Object Tracking by \link{https://github.com/yehengchen/Object-Detection-and-Tracking}{yehengchen}
-			
-			\break
-			\item The \link{https://github.com/theAIGuysCode/yolov4-deepsort.git}{theAIGuysCode} uses 
-			\begin{itemize}
-				\item \textbf{YOLO model} to detect vehicles
-				\item \textbf{deep-sort} model to track movement
-			\end{itemize}
-			Few observations
-			\begin{itemize}
-				\item Real-time speed achieved
-				\item Implemented in python - TensorFlow
-				\item Tracking is not accurate - affected by object occlusion, accuracy of YOLO, near identical objects, closely spaced objects, sudden non-linear movement.
-			\end{itemize}
-			Tried-out the repo \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Colab/obj\%20detection\%20and\%20tracking.ipynb}{notebook} $|$ \link{https://drive.google.com/file/d/172r\_jCelsVzNxqjhgWjvTbXkcNGTN4Yl/view?usp=sharing}{video1} $|$ \link{https://drive.google.com/file/d/1EwC8sfuPR-gbwt8udMf6tlxATn6Ud3oA/view?usp=sharing}{video2} $|$
-			\link{https://drive.google.com/file/d/1-4hTbPk6xC-Cb58G2ZXE6qi6WpWuD-XT/view?usp=sharing}{video3}	
-		\end{itemize}
-	\end{frame}
-
-
-	\begin{frame}[allowframebreaks]{Building custom YOLOv4 model}
-		\framesubtitle{Current Model evaluation}
+	\begin{frame}{YOLOv4 model}
+		\framesubtitle{Training - Loss and Accuracy chart}
 		\begin{center}
 			\includegraphics[height=0.7\textheight]{res/darknet_training_chart}
 		\end{center}
-	
-		\newpage
+	\end{frame}
+
+	\begin{frame}{YOLOv4 model}
+		\framesubtitle{Accuracy}
 		\begin{scriptsize}
 			detections\_count = 7729, unique\_truth\_count = 1956  \\ 
 			class\_id = 0, name = auto, ap = 97.27\%   	 (TP = 285, FP = 15) \\
@@ -356,63 +344,15 @@
 			mean average precision (mAP@0.50) = 0.967638, or 96.76 \% \\
 			Total Detection Time: 268 Seconds
 		\end{scriptsize}		
-		\newpage
-		
+	\end{frame}
+
+	\begin{frame}{YOLOv4 model}
+		\framesubtitle{Prediction}
 		\begin{center}
 			\includegraphics[width=\linewidth]{res/data_set1/predictions}
 		\end{center}
 	\end{frame}
 
-
-	\begin{frame}[allowframebreaks]{Building custom YOLOv4 model}
-		\framesubtitle{Dataset information (from internet)}
-		Fetched from \link{https://www.kaggle.com/datasets/dataclusterlabs/indian-vehicle-dataset}{Kaggle}. Used labelImg to label images. 
-		\begin{table}[]
-			\centering
-			\begin{tabular}{|l|l|}
-				\hline
-				\textbf{Frequency}    & \textbf{Label Name} \\ \hline
-				557                   & two wheeler         \\ \hline
-				354                   & truck               \\ \hline
-				297                   & auto                \\ \hline
-				233                   & car                 \\ \hline
-				220                   & bus                 \\ \hline
-				133                   & tractor             \\ \hline
-				101                   & van                 \\ \hline
-				1                     & jcb                 \\ \hline
-				\textbf{Total Boxes}  & \textbf{1956}       \\ \hline
-				\textbf{Total Images} & \textbf{733}        \\ \hline
-			\end{tabular}
-		\end{table}
-		
-		
-		
-		\newpage
-		\begin{figure}
-			\includegraphics[width=0.24\linewidth]{"res/data_set1/image1"} \hfill
-			\includegraphics[width=0.24\linewidth]{"res/data_set1/image2"} \hfill
-			\includegraphics[width=0.24\linewidth]{"res/data_set1/image3"} \hfill
-			\includegraphics[width=0.24\linewidth]{"res/data_set1/image4"}
-		\end{figure}
-	\end{frame}
-
-
-	\begin{frame}[allowframebreaks]{Building custom YOLOv4 model}
-		\framesubtitle{Dataset information (from camera network)}
-		Fetched from camera infrastructure. Used labelImg to label images.
-		\begin{center}
-			\includegraphics[width=\linewidth]{res/data_set2/custom_label_stat}
-		\end{center}
-		
-		\newpage
-		\begin{figure}
-			\includegraphics[width=0.48\linewidth]{"res/data_set2/image1"} \hfill
-			\includegraphics[width=0.48\linewidth]{"res/data_set2/image2"}
-			\\[\smallskipamount]
-			\includegraphics[width=0.48\linewidth]{"res/data_set2/image3"} \hfill
-			\includegraphics[width=0.48\linewidth]{"res/data_set2/image4"}
-		\end{figure}
-	\end{frame}
 
 
 	\subsection{UI/UX}	
