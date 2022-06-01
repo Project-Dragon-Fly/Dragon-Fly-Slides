@@ -61,22 +61,22 @@
 		Current system make use of manual approach of reviewing long video
 		clips to identify the suspect vehicle. Various possible routes that can
 		be taken by suspect further makes the process of re-identification very
-		difficult and time consuming.\\~\\
-				
-		DragonFly is an AI based project that aims to resolve this particular issue. 
+		difficult and time consuming.\\~\\		
+		DragonFly is an AI based project that aims to resolve this  issue. \\~\\
+
+		This is also one of the open challenges in NVIDIA AI city challenge, to perform Natural language-based vehicle track retrieval and City-scale multi-camera vehicle tracking.
+		
 	\end{frame}
 
 	\subsection{Objective}
 	\begin{frame}{Objective}
 		\begin{itemize}
 			\item Aid in traffic policing by extracting and detecting various vehicle
-			description
-			\item Generate route map for a specific vehicle description, along with
-			timestamps
+			description from existing CCTV infrastructure
+			\item Generate route map for a specific vehicle description, along with timestamps, visualised in minimalistic user interface. 
 			\item Conduct traffic analysis to predict traffic flow with existing sensor
-			network.
-			\item System is to be used by general public, which accounts for
-			unstructured input of vehicle description.
+			network, and generate probabilistic patterns for resource deployment.
+			\item Easier management \& visualisation of CCTV camera infrastructure
 		\end{itemize}
 	\end{frame}
 
@@ -118,8 +118,11 @@
 		\begin{itemize}
 			\item Custom YOLOv4 AI model trained on Indian vehicles
 			\item Integration of various AI based algorithm and models (YOLOv4, deepSORT, siamese Network)
-			\item Simple user interface supporting elastic search
-			\item Optimization of back-end services that are containerized 
+   			\item Vehicle Image Dictionary Framework - to enable easier identification and labeling 
+			\item Minimalistic user interface supporting elastic search
+			\item Wiregaurd VPN based interface for securely connecting with existing CCTV infrastructure
+   			\item Websocket based interactive realtime tracking UI 
+			\item Containerised CI deployment pipeline 
 		\end{itemize}
 	\end{frame}
 	
