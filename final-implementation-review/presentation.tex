@@ -24,16 +24,13 @@
 }
 \date{\today}
 
-%Design Diagram/ Algorithm
 %Results
 %Result -Analysis( Use graphs/ metric relevent to your work )
 %Conclusion
 %Future Scope
 %References
 
-% design
-% methologies
-% model implementation details
+
 % result analysis
 % challange and future emprovemtns
 
@@ -174,7 +171,7 @@
 		\begin{center}
 			\includegraphics[width=0.8\linewidth]{res/YOLOV4-research-gate.png}
 		\end{center}
-		Image imported from \link{https://www.researchgate.net/figure/Overall-structure-of-YOLOv4-including-CSPDarknet-backbone-SPPnet-PANet-and-3-YOLO\_fig2\_344919620}{researchgate}. Find the implemented model architecture from \href{https://github.com/Project-Dragon-Fly/Dragon-Fly-Slides/blob/main/final-implementation-review/res/yolov4-vehicle.svg}{here}.
+		Image imported from \link{https://www.researchgate.net/figure/Overall-structure-of-YOLOv4-including-CSPDarknet-backbone-SPPnet-PANet-and-3-YOLO\_fig2\_344919620}{researchgate}. Find the implemented model architecture from \link{https://github.com/Project-Dragon-Fly/Dragon-Fly-Slides/blob/main/final-implementation-review/res/yolov4-vehicle.svg}{here}.
 	\end{frame}
 
 	\begin{frame}{YOLOv4}		
@@ -192,6 +189,27 @@
 					Current Iterations        & 7300                       \\ \hline
 					DataSet & \begin{tabular}[c]{@{}l@{}}500 till 2800 iteration\\ 733 after wards\end{tabular} \\ \hline
 					Approx Hrs Spent training & 35-48 hrs                \\ \hline
+				\end{tabular}%
+			}
+		\end{table}
+	\end{frame}
+
+	\begin{frame}{YOLOv4}		
+		\framesubtitle{Model Parameters}
+		\begin{table}[]
+			\centering
+			\resizebox{\textwidth}{!}{%
+				\begin{tabular}{|l|l|}
+					\hline
+					Input size            & 416 * 416                    \\ \hline
+					Input Channels            & 3   \\ \hline
+					Batch size             & 32                          \\ \hline
+					learning rate    & 0.0013 \\ \hline								Final input to yolo layer        & [256*256],[512*512],[1024*1024]                       \\ \hline
+					Total Layers               & 162                     \\ \hline
+
+					Target Classes & \begin{tabular}[c]{@{}l@{}}
+						auto, bus, tempo traveler, tractor, \\
+						truck, van, two wheeler, car, jcb\end{tabular} \\ \hline
 				\end{tabular}%
 			}
 		\end{table}
