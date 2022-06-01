@@ -51,16 +51,18 @@
 
 	\section{Introduction}
 	\subsection{Motivation}
-	\begin{frame}{Motivation}		
-		Policing agencies have setup vast networks of distributed surveillance cameras along major routes. The sheer amount of data generated is overwhelming for manual analysis, to trace routes of rouge vehicles.\\~\\
+	\begin{frame}{Motivation}
+		\begin{itemize}
+			\item Policing agencies have setup vast networks of distributed surveillance cameras along major routes. The sheer amount of data generated is overwhelming for manual analysis, to trace routes of rouge vehicles.
+			\item Current system make use of manual approach of reviewing long video
+			clips to identify the suspect vehicle. Various possible routes that can
+			be taken by suspect further makes the process of re-identification very
+			difficult and time consuming.		
+		\end{itemize}
 		
-		Current system make use of manual approach of reviewing long video
-		clips to identify the suspect vehicle. Various possible routes that can
-		be taken by suspect further makes the process of re-identification very
-		difficult and time consuming.\\~\\		
-		DragonFly is an AI based project that aims to resolve this  issue. \\~\\
-
-		This is also one of the open challenges in NVIDIA AI city challenge, to perform Natural language-based vehicle track retrieval and City-scale multi-camera vehicle tracking.
+		\begin{block}{Open AI city challenge}
+			This is one of the open challenges in NVIDIA AI city challenge, to perform Natural language-based vehicle track retrieval and City-scale multi-camera vehicle tracking.
+		\end{block}
 		
 	\end{frame}
 
@@ -69,10 +71,10 @@
 		\begin{itemize}
 			\item Aid in traffic policing by extracting and detecting various vehicle
 			description from existing CCTV infrastructure
-			\item Generate route map for a specific vehicle description, along with timestamps, visualised in minimalistic user interface. 
+			\item Generate route map for a specific vehicle description, along with timestamps, visualized in minimalist user interface. 
 			\item Conduct traffic analysis to predict traffic flow with existing sensor
 			network, and generate probabilistic patterns for resource deployment.
-			\item Easier management \& visualisation of CCTV camera infrastructure
+			\item Easier management \& visualization of CCTV camera infrastructure
 		\end{itemize}
 	\end{frame}
 
@@ -87,15 +89,15 @@
 					\multicolumn{1}{c|}{\textit{\textbf{Method}}} &
 					\multicolumn{1}{c|}{\textit{\textbf{Pros and Cons}}} &
 					\multicolumn{1}{c|}{\textit{\textbf{Challenges}}} \\ \hline
-					\begin{tabular}[c]{@{}l@{}}CityFlow: A City-Scale \\ Benchmark for Multi-Target\\ Multi-Camera  Vehicle\\  Tracking and  \\ Re-Identification\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}CityFlow: A City-Scale \\ Benchmark for Multi-Target\\ Multi-Camera  Vehicle\\  Tracking and  \\ Re-Identification, 2019\end{tabular} &
 					\begin{tabular}[c]{@{}l@{}}Use of Multi-Target Single Camera\\ and Multi-Target Multi-Camera \\ tracking.\\ \\ Use visual-spatio-temporal\\ reasoning\end{tabular} &
 					\begin{tabular}[c]{@{}l@{}}Pros:\\ Better and faster results.,\\ Handle large scale recognition\\ Tracking and small prediction\\ \\ Cons:\\ Overlapping viewpoints,\\ Implemented only at junction \\ points\end{tabular} &
 					\begin{tabular}[c]{@{}l@{}}High quality videos\\ \\ Multiple viewpoints on \\ same object\\ \\ Require annotated videos\end{tabular} \\ \hline
-					\begin{tabular}[c]{@{}l@{}}Real-Time Vehicle Make and\\ Model Recognition System\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Real-Time Vehicle Make and\\ Model Recognition System, 2019\end{tabular} &
 					\begin{tabular}[c]{@{}l@{}}Random Forest and Support Vector\\  Machine coupled with traditional\\ Vehicle Make Model Recognition\\ System,\\ \\ Usage of Histogram of Oriented \\ Gradient (HOG) and GIST \\ features\end{tabular} &
 					\begin{tabular}[c]{@{}l@{}}Pros:\\ Superior processing speed \& \\ recognition accuracy wrt existing \\ VMMR, Accounts for partial \\ viewpoints\\ \\ Cons:\\ High dimensional,  Region of \\ interest is only on parts, No global\\  representation\end{tabular} &
 					\begin{tabular}[c]{@{}l@{}}Computational time increases\\ with increase of blocks HOG\\ \\ Limited Region of Interest\end{tabular} \\ \hline
-					\begin{tabular}[c]{@{}l@{}}Efficient and Deep Vehicle \\ Re-Identification Using \\ Multi-Level Feature \\ Extraction\end{tabular} &
+					\begin{tabular}[c]{@{}l@{}}Efficient and Deep Vehicle \\ Re-Identification Using \\ Multi-Level Feature \\ Extraction, 2019\end{tabular} &
 					\begin{tabular}[c]{@{}l@{}}Global channel extracts single \\ feature generalizing whole image,\\ \\ Local channel extract multiple\\  local features (logo, stickers),\\ \\ Attribute channel extracts \\ color, model, type\end{tabular} &
 					\begin{tabular}[c]{@{}l@{}}Pros:\\ Extraction of inter and intra features,\\ Data augmentation with license plate \\ verification\\ \\ Cons:\\ Requires Data augmentation,\\ Effected by illuminations\end{tabular} &
 					\begin{tabular}[c]{@{}l@{}}Cross camera vehicle tracking\\ \\ Changes in color response\\ \\ Background clutter\end{tabular} \\ \hline
@@ -312,7 +314,13 @@
 		Image imported from \link{https://www.researchgate.net/figure/Structure-of-the-Siamese-network\_fig1\_327494280}{researchgate}.
 	\end{frame}
 
-
+	\begin{frame}{Algorithm}
+		\framesubtitle{Integrate algorithms}
+		\begin{center}
+			\includegraphics[height=0.7\textheight]{res/camera_network_demo.png}
+		\end{center}
+		Created with \link{https://www.google.com/maps/d/edit?mid=1s2ST5x4nn-EK3JqU-c9EEGASRq5Ini0&usp=sharing}{Google Maps}
+	\end{frame}
 	
 	
 
