@@ -126,6 +126,11 @@
 		\end{itemize}
 	\end{frame}
 	
+	
+	%---------------------------------------------------------------------------
+	% DESIGN AND IMPLEMENTATION ------------------------------------------------
+	%---------------------------------------------------------------------------	
+	
 	\section{Design and Implementation}
 	\begin{frame}{Proposed System}
 		\begin{itemize}
@@ -134,6 +139,14 @@
 			\item The system tries to re-identify the said vehicle across multiple camera locations.
 			\item The system finds the path followed by the said vehicle along with the detected frame at each camera points.
 		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Algorithm}
+		\framesubtitle{Dummy camera network}
+		\begin{center}
+			\includegraphics[height=0.7\textheight]{res/camera_network_demo.png}
+		\end{center}
+		Created with \link{https://www.google.com/maps/d/edit?mid=1s2ST5x4nn-EK3JqU-c9EEGASRq5Ini0&usp=sharing}{Google Maps}
 	\end{frame}
 	
 	\subsection{System Architecture}
@@ -157,11 +170,77 @@
 
 	\subsection{AI Models}
 	\begin{frame}{YOLOv4}
+		\framesubtitle{Architecture}
 		\begin{center}
 			\includegraphics[width=0.8\linewidth]{res/YOLOV4-research-gate.png}
 		\end{center}
-		Image imported from \link{https://www.researchgate.net/figure/Overall-structure-of-YOLOv4-including-CSPDarknet-backbone-SPPnet-PANet-and-3-YOLO\_fig2\_344919620}{researchgate}. Find the implemented model architecture from .
+		Image imported from \link{https://www.researchgate.net/figure/Overall-structure-of-YOLOv4-including-CSPDarknet-backbone-SPPnet-PANet-and-3-YOLO\_fig2\_344919620}{researchgate}. Find the implemented model architecture from \href{https://github.com/Project-Dragon-Fly/Dragon-Fly-Slides/blob/main/final-implementation-review/res/yolov4-vehicle.svg}{here}.
 	\end{frame}
+
+	\begin{frame}{YOLOv4}		
+		\framesubtitle{Model Training}
+		\begin{table}[]
+			\centering
+			\resizebox{\textwidth}{!}{%
+				\begin{tabular}{|l|l|}
+					\hline
+					Framework used            & DarkNet                    \\ \hline
+					Initial weight            & official 80 class weight   \\ \hline
+					Target classes            & 9                          \\ \hline
+					Platform for training     & Google Colab + Workstation \\ \hline
+					Current mAP               & 98.4 \%                    \\ \hline
+					Current Iterations        & 7300                       \\ \hline
+					DataSet & \begin{tabular}[c]{@{}l@{}}500 till 2800 iteration\\ 733 after wards\end{tabular} \\ \hline
+					Approx Hrs Spent training & 35-48 hrs                \\ \hline
+				\end{tabular}%
+			}
+		\end{table}
+	\end{frame}
+
+
+	\begin{frame}{deepSORT}
+		\begin{center}
+			\includegraphics[width=0.95\linewidth]{res/deepSORT.png}
+		\end{center}
+		Image imported from \link{https://www.researchgate.net/figure/Architecture-of-Deep-SORT-Simple-online-and-real-time-tracking-with-deep-association\_fig2\_353256407}{researchgate}.
+	\end{frame}
+
+	\begin{frame}{Siamese Network}
+		\begin{center}
+			\includegraphics[height=0.6\textheight]{res/siamese-network.png}
+		\end{center}
+		Image imported from \link{https://www.researchgate.net/figure/Structure-of-the-Siamese-network\_fig1\_327494280}{researchgate}.
+	\end{frame}
+
+
+	\subsection{UI Design}
+	\begin{frame}{Vehicle Image Dictionary}
+		\begin{center}
+			\includegraphics[width=\linewidth]{res/image_dictionary.png}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Login Page}
+		\begin{center}
+			% \includegraphics[width=\linewidth]{res/image.png}
+		\end{center}
+ 	\end{frame}
+ 
+	 \begin{frame}{Tracking Vehicle}
+	 	\begin{center}
+	 		% \includegraphics[width=\linewidth]{res/image.png}
+	 	\end{center}
+	 \end{frame}
+ 
+	 \begin{frame}{Building Route Map}
+		\begin{center}
+			% \includegraphics[width=\linewidth]{res/image.png}
+		\end{center}
+	\end{frame}
+
+	
+
+	
 	
 
 
@@ -232,26 +311,6 @@
 		\end{itemize}
 	\end{frame}
 
-	\begin{frame}{Building custom YOLOv4 model}
-		\framesubtitle{Model Information}
-		See code at \link{https://github.com/Project-Dragon-Fly/tutorial-trials/blob/tutorial\_testing/Colab/indian\_vehicle\_detection.ipynb}{notebook}
-		\begin{table}[]
-			\centering
-			\resizebox{\textwidth}{!}{%
-				\begin{tabular}{|l|l|}
-					\hline
-					Framework used            & DarkNet                  \\ \hline
-					Initial weight            & official 80 class weight \\ \hline
-					Target classes            & 9                        \\ \hline
-					Platform for training     & Google Colab             \\ \hline
-					Current mAP               & 96.7 \%                  \\ \hline
-					Current Iterations        & 4800                     \\ \hline
-					DataSet & \begin{tabular}[c]{@{}l@{}}500 till 2800 iteration\\ 733 after wards\end{tabular} \\ \hline
-					Approx Hrs Spent training & 25-30 hrs                \\ \hline
-				\end{tabular}%
-			}
-		\end{table}
-	\end{frame}
 
 	\begin{frame}[allowframebreaks]{Building custom YOLOv4 model}
 		\framesubtitle{Current Model evaluation}
