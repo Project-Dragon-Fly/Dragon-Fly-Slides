@@ -398,21 +398,20 @@
 	\section{Conclusion}
 	\begin{frame}{Conclusion}
 		\begin{itemize}
-			\item Custom YOLOv4 AI model trained on Indian vehicles
-			\item Integration of various AI based algorithm and models (YOLOv4, deepSORT, siamese Network)
-   			\item Vehicle Image Dictionary Framework - to enable easier identification and labeling 
-			\item Minimalistic user interface
-			\item Wiregaurd VPN based interface for securely connecting with existing CCTV infrastructure
-   			\item Websocket based interactive realtime tracking UI 
-			\item Containerised CI/CD pipeline 
-			\item Secure HLS Live Streaming
+			\item The project works over the existing CCTV infrastructure
+			\item Detections are retrieved based on user query in web GUI
+			\item AI Detection Engine processes camera stream, computing vehicle features
+			\item YOLOv4 model computes the bounding box and class confidence
+			\item DeepSORT conduct multi-tracking in multiple objects
+			\item User can select between alternative detections to generate routemap
+			\item Vehicle Routemap is display using Map
+			\item User can view live stream of multiple CCTV camera within the app
 		\end{itemize}
 	\end{frame}
 	\begin{frame}{Future Scope}
-		\framesubtitle{Training - Loss and Accuracy chart}
-		\begin{center}
-			\includegraphics[height=0.7\textheight]{res/darknet_training_chart}
-		\end{center}
+		\begin{itemize}
+			\item 
+		\end{itemize}
 	\end{frame}
 \section{References}
 \begin{frame}[allowframebreaks]{References}
