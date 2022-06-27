@@ -1,0 +1,84 @@
+<mxfile host="65bd71144e">
+    <diagram id="MQiimjNqmvz4MkWxc6DV" name="LiveStreamArch">
+        <mxGraphModel dx="1285" dy="1078" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-22" value="Backend&lt;br&gt;Network" style="shape=umlFrame;whiteSpace=wrap;html=1;fontSize=14;dashed=1;width=80;height=40;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="60" width="400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-18" value="Secure Network" style="shape=umlFrame;whiteSpace=wrap;html=1;fontSize=14;dashed=1;width=80;height=40;fillColor=#CCFFCE;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="60" width="350" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="TTizbZUMgJakswOK9ViD-1" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="350" y="160"/>
+                            <mxPoint x="350" y="160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-5" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;RTSP Stream&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;(Over VPN Tunnel)&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aBy2o1v67G3EIM40Kepp-4" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1736" y="-1" relative="1" as="geometry">
+                        <mxPoint x="12" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="TTizbZUMgJakswOK9ViD-1" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.security_camera;flipH=1;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="111" width="93.33" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="2" target="aBy2o1v67G3EIM40Kepp-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-8" value="&lt;b&gt;RTMP Stream&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" parent="aBy2o1v67G3EIM40Kepp-7" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1686" y="1" relative="1" as="geometry">
+                        <mxPoint x="12" y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="FFmpeg&lt;br&gt;(Transcoder)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="130" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" parent="1" source="aBy2o1v67G3EIM40Kepp-6" target="aBy2o1v67G3EIM40Kepp-9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-12" value="&lt;b&gt;HLS Stream&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" parent="aBy2o1v67G3EIM40Kepp-10" vertex="1" connectable="0">
+                    <mxGeometry x="-0.22" y="-1" relative="1" as="geometry">
+                        <mxPoint x="24" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-6" value="Nginx&lt;br&gt;(Media Streaming Server)" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="130" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-9" value="Browser Client" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="990" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;strokeWidth=1;" parent="1" source="aBy2o1v67G3EIM40Kepp-13" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="540" y="280"/>
+                            <mxPoint x="540" y="230"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-17" value="&lt;b&gt;Stream Key&lt;br&gt;&amp;amp; Control&lt;br&gt;&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" parent="aBy2o1v67G3EIM40Kepp-14" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1387" y="-2" relative="1" as="geometry">
+                        <mxPoint x="26" y="2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;strokeWidth=1;" parent="1" source="aBy2o1v67G3EIM40Kepp-13" target="aBy2o1v67G3EIM40Kepp-9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-16" value="&lt;b&gt;Stream Key&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" parent="aBy2o1v67G3EIM40Kepp-15" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2206" y="-3" relative="1" as="geometry">
+                        <mxPoint x="-41" y="-3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-13" value="Backend Server &lt;br&gt;Stream Controller Module&lt;br&gt;(Django)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="250" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="aBy2o1v67G3EIM40Kepp-23" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;NVR/IP Camera&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=1;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="147" y="181" width="83.33" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
