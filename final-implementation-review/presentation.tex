@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage{setspace}
 
 \newcommand{\link}[2]{\href{#1}{\textit{\color{blue}{#2}}}}%
 
@@ -340,7 +341,7 @@
 	\begin{frame}{Algorithm}
 		\framesubtitle{Integrate algorithms}
 		\begin{center}
-			\includegraphics[height=0.7\textheight]{res/camera_network_demo.png}
+			\includegraphics[height=0.7\textheight]{res/camera-network.png}
 		\end{center}
 		Created with \link{https://www.google.com/maps/d/edit?mid=1s2ST5x4nn-EK3JqU-c9EEGASRq5Ini0&usp=sharing}{Google Maps}
 	\end{frame}
@@ -361,7 +362,7 @@
 		\end{center}
 	\end{frame}
 
-	\begin{frame}[allowframebreaks]{YOLOv4 model Accurancy}
+	\begin{frame}[allowframebreaks]{YOLOv4 model Accuracy}
 		\framesubtitle{Matrix}
 		\begin{table}[]
 			\begin{tabular}{|l|l|l|l|}
@@ -414,22 +415,24 @@
 			\item AI Detection Engine processes camera stream, computing vehicle features
 			\item YOLOv4 model computes the bounding box and class confidence
 			\item DeepSORT conduct multi-tracking in multiple objects
-			\item User can select between alternative detections to generate routemap
-			\item Vehicle Routemap is display using Map
+			\item User can select between alternative detections to generate route-map
+			\item Use of Google Map for vehicle route display
 			\item User can view live stream of multiple CCTV camera within the app
 		\end{itemize}
 	\end{frame}
 	\begin{frame}[allowframebreaks]{Future Scope}
+		\begin{spacing}{1.5}
 		\begin{itemize}
-			\item Addition of advanced camera and integration of license plate detection, to recognise forged license plate
+			\item Addition of advanced camera and integration of license plate detection, to recognize forged license plate
 			\item Training in all weather conditions and higher number of sub-categories
 			\item Complete implementation of Siamese Network. 
-			\item Search Engines like elastic search and language models for natural interaction and extraction of feature description
+			\item Search Engines like elastic search and language models for natural interaction and extraction of feature description 		
 			\item Securing IP stream of camera feed using DRM protection.
-			\item Using Enteprise Media Servers like Kurento Media Server, Ant Media Server to enable ultra low latency stream relay
+			\item Using Enterprise Media Servers like Kurento Media Server, Ant Media Server to enable ultra low latency stream relay
 			\item Usage of Nvidia MPS and Multi-GPU instances
-			\item Use of PP-YOLO with PaddlePaddle framework can boost the overall performance of thedistributed system.
+			\item Use of PP-YOLO with PaddlePaddle framework can boost the overall performance of the distributed system.
 		\end{itemize}
+		\end{spacing}
 	\end{frame}
 \section{References}
 \begin{frame}[allowframebreaks]{References}
