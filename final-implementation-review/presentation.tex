@@ -275,29 +275,29 @@
 		\end{table}
 	\end{frame}
 
-	\begin{frame}[allowframebreaks]{Dataset - Kaggle}
-		Fetched from \link{https://www.kaggle.com/datasets/dataclusterlabs/indian-vehicle-dataset}{Kaggle}. Used labelImg to label images. 
-		\begin{table}[]
-			\centering
-			\begin{tabular}{|l|l|}
-				\hline
-				\textbf{Label Name}   & \textbf{Frequency}    \\ \hline
-				two wheeler           & 557                   \\ \hline
-				truck                 & 354                   \\ \hline
-				auto                  & 297                   \\ \hline
-				car                   & 233                   \\ \hline
-				bus                   & 220                   \\ \hline
-				tractor               &  133                  \\ \hline
-				van                   & 101                   \\ \hline
-				jcb                   & 1                     \\ \hline
-				\textbf{Total Boxes}  & \textbf{1956}       \\ \hline
-				\textbf{Total Images} & \textbf{733}        \\ \hline
-			\end{tabular}
-		\end{table}
+	\begin{frame}{Dataset}
+		Fetched from \link{https://www.kaggle.com/datasets/dataclusterlabs/indian-vehicle-dataset}{Kaggle} and CICET camera network. Used labelImg to label images. 
+		\begin{center}
+			\begin{table}
+				\begin{tabular}{|l|c|c||c|}
+					\hline
+					\textbf{Class}        & \textbf{Kaggle} & \textbf{CICET} & \textbf{Total} \\ \hline
+					Two wheeler           & 557             & 291            & \textbf{848}   \\ \hline
+					Truck                 & 354             & 170            & \textbf{424}   \\ \hline
+					Auto                  & 297             & 146            & \textbf{443}   \\ \hline
+					car                   & 233             & 432            & \textbf{665}   \\ \hline
+					bus                   & 220             & 112            & \textbf{332}   \\ \hline
+					tractor               & 133             & 0              & \textbf{113}   \\ \hline
+					van                   & 101             & 131            & \textbf{232}   \\ \hline
+					JCB                   & 1               & 0              & \textbf{1}     \\ \hline \hline
+					\textbf{Total Boxes}  & \textbf{1956}   & \textbf{1282}  & \textbf{3238}  \\ \hline
+					\textbf{Total Images} & \textbf{733}    & \textbf{826}   & \textbf{1559}  \\ \hline
+				\end{tabular}
+			\end{table}
+		\end{center}
+	\end{frame}
 		
-		
-		
-		\newpage
+		\begin{frame}{Dataset - Kaggle}
 		\begin{figure}
 			\includegraphics[width=0.24\linewidth]{"res/data_set1/image1"} \hfill
 			\includegraphics[width=0.24\linewidth]{"res/data_set1/image2"} \hfill
@@ -307,13 +307,7 @@
 	\end{frame}
 	
 	
-	\begin{frame}[allowframebreaks]{Dataset - Camera Network}
-		Fetched from camera infrastructure. Used labelImg to label images.
-		\begin{center}
-			\includegraphics[width=\linewidth]{res/data_set2/custom_label_stat}
-		\end{center}
-		
-		\newpage
+	\begin{frame}{Dataset - Camera Network}
 		\begin{figure}
 			\includegraphics[width=0.48\linewidth]{"res/data_set2/image1"} \hfill
 			\includegraphics[width=0.48\linewidth]{"res/data_set2/image2"}
